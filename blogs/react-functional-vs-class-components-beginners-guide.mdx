@@ -1,0 +1,92 @@
+---
+tags: React
+title: React Functional vs Class Components - Beginners Guide.
+body: React being one of the famous frontend framework is used for building different kind of user interface. While working with components in JSX we come across two different types of components.
+author: Abhishek Kushwaha
+date: 2022-11-08
+blogImage: /blogs/react-functional-vs-class-components-beginners-guide/blogimage.png
+authorImage: /authors/abhishek-kushwaha.jpeg
+blogslug: react-functional-vs-class-components-beginners-guide
+---
+
+React being one of the famous frontend framework is used for building different kind of user interface. While working with components in JSX we come across two different types of components.
+1. Functional Components
+2. Class Components
+
+In this article we would be looking at how these components are different. So let's get started
+
+Before going into class or functional components let's discuss what's a react component meant to be :
+
+# React Component
+
+A component is block of code in which further the components exists to bring any design to small pieces. These are reusable code block and can used or imported independently.
+A components play a crucial role while building the complex ui design as we tend to avoid  putting everything in a single page.
+
+React has two types of components, lets look into those one by one.
+
+# React Functional Components
+
+A Functional Component is basically a JavaScript function that return a React JavaScript Xml element(known as JSX).
+
+Let's have an example to understand 
+
+```js
+import React from "react";
+
+const Welcome = props => (
+  <div>
+    <h1>Welcome🙌, {props.name}</h1>
+  </div>
+);
+
+export default Welcome;
+```
+
+In Functional Components there is no render method , they are mainly responsible for UI presentational like a card or button. If Component needs react state , its advised to go with Functional Components.
+
+# React Class Components
+
+
+<div align="center">
+<Image src="/blogs/react-functional-vs-class-components-beginners-guide/blogimage.png" 
+    height={420}
+    width={840}
+/>
+</div>
+
+Class Component  is a regular ES6 class that extends the component class from the react library. To return HTML you have to use render() method in it. 
+You pass props down to class components and access them with _this.props _
+
+```js
+class ClassComponent extends React.Component {
+ render() {
+   return <h1>Hello, world</h1>;
+ }
+}
+
+```
+If we want to pass some props for the components:
+
+
+`<Component name = “Abhishek Kushwaha” />`
+
+In case of FUNCTIONAL COMPONENT ,  we pass the props as an argument of our function using the construction “props.name”. 
+
+```js
+function FunctionalComponent(props) {
+ return <h1>Hello, {props.name}</h1>;
+}
+```
+With class components, we need to add this. to refer to props.
+```js
+class ClassComponent extends React.Component {
+render() {
+ return <h1>Hello, {this.props.name}</h1>;
+}
+```
+
+
+Hope you found Helpful 😊 
+
+
+<YouTube id="2BDnl7WMhw4" />
