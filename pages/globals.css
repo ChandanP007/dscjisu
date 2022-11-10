@@ -1,12 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 .nav-list {
     @apply text-ellipsis font-mono font-medium m-4;
 }
 
 html {
     user-select: contain;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .menu-options {
