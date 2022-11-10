@@ -8,6 +8,8 @@ import Community from '../layout/Community';
 import Events from '../layout/Events';
 import Header from '../layout/Header';
 // import Landing from '../layout/Landing';
+import Agenda from '../layout/agenda';
+import Connect from '../layout/Connect';
 import Team from '../layout/Team';
 
 export async function getStaticProps() {
@@ -66,10 +68,12 @@ const Home = ({ team, event, community }: any) => {
       <main>
         {/* <Landing /> */}
         <Header />
+        <Agenda />
         <Events events={event} />
-        <Team team={team.slice(0, 3)} />
-        <Chapter />
+        <Team team={team.slice(0, 8)} />
+        <Connect />
         <Community community={community} />
+        <Chapter />
         {/* <SpeedDail /> */}
       </main>
     </>
