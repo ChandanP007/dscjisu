@@ -14,6 +14,7 @@ export default function Blog({ projects }: { projects: ProjectMeta[] }) {
                     <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
                         Projects made by our community with ❤️
                     </p>
+                    <p>Under Development ☁️</p>
                 </div>
                 <div className='grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 lg:mx-5 justify-items-center pt-10'>
                 </div>
