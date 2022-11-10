@@ -17,7 +17,7 @@ export interface ITeamCard {
 const TeamCard: React.FC<ITeamCard> = ({ github, id, image, name, linkedin, role, tagline, twitter }) => {
   return (
     <>
-      <div className=' mx-5 p-0 flex flex-col max-w-xs  bg-black m-3 bg-shadow-2xl  dark:shadow-grey-400  shadow-lg   justify-center rounded-xl border-white  border-2 hover:bg-black hover:shadow-lg hover:shadow-teal-300 transition-all duration-200 ease-in  hover:scale-105  '
+      <div className=' mx-5 p-0 flex flex-col   bg-black m-3 bg-shadow-2xl  dark:shadow-grey-400  shadow-lg   justify-center  rounded-xl border-white  border-2 hover:bg-black hover:shadow-lg hover:shadow-teal-300 transition-all duration-200 ease-in  hover:scale-105  '
         key={id} title={
           name + " " + role + " " + tagline
         } >
