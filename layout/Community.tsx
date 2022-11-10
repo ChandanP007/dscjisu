@@ -28,7 +28,7 @@ export default function Community({ community }: community) {
                     community?.map((partner: CommunityProps) => {
                         return (
                             <div className='bg-slate-600 rounded-lg p-10   transition-all duration-1000' key={partner.id} title={partner.description}>
-                                <Image src={partner.image} alt={partner.name} className='rounded-xl  h-20  transition-all duration-1000' height={100} width={100} />
+                                <Image src={partner.image} alt={partner.name} className='rounded-xl    transition-all duration-1000' height={200} width={300} />
                             </div>
                         )
                     }
