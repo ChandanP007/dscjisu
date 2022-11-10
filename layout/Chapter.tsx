@@ -3,11 +3,11 @@ import Image from 'next/image'
 function Newsletter() {
     return (
         <div className='lg:p-20 sm:p-2 flex  flex-col text-center bg-slate-800 py-10'>
-            <h1 className='lg:text-6xl text-4xl dark:text-white font-mono'>Stay <span className='underline decoration-solid underline-offset-2 decoration-yellow-300 font-mono updated'>Updated</span></h1>
-            <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+            <h1 className='lg:text-6xl text-4xl text-white font-mono'>Stay <span className='underline decoration-solid underline-offset-2 decoration-yellow-300 font-mono updated'>Updated</span></h1>
+            <p className='text-white font-light font-mono pt-5 text-base px-5 text-clip'>
                 Want to stay up to date with the latest news and updates?
             </p>
-            <p className='dark:text-white  font-mono  font-light pt-2 text-base px-5 text-clip'>
+            <p className='text-white  font-mono  font-light pt-2 text-base px-5 text-clip'>
                 Join the <span className='underline underline-offset-4 decoration-solid decoration-cyan-400 font-mono font-extrabold text-lg'>Chapter</span> in the Google Developer Clubs  and stay up to date with the latest news , updates and Events.
             </p>
             <div className='flex justify-center p-10'>
