@@ -24,7 +24,7 @@ function Navbar() {
                         <Link href='/' passHref>
                             <div className=' flex  justify-center items-center'>
                                 <Image src="/images/gdsc_nav_logo.png" alt='gdsc logo' width={50} height={50} />
-                                <span id="jis--university" className='text-black  font-mono font-semibold text-3xl  dark:text-white'>JIS University</span>
+                                <span id="jis--university" className='  font-mono font-semibold text-3xl  text-white'>JIS University</span>
                             </div>
                         </Link>
                     </div>
