@@ -21,14 +21,13 @@ interface TeamProps {
 export default function Team({ team }: team) {
 
     return (
-        <div className=" pt-20 text-center dark:bg-[#182232] px-5">
-            <h1 className='lg:text-6xl text-4xl dark:text-white font-mono'>Organizers</h1>
-            <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+        <div className=" py-20 text-center bg-slate-900 px-5">
+            <h1 className='lg:text-6xl text-4xl text-white font-mono'>Organizers</h1>
+            <p className='text-white font-light font-mono pt-6 text-base px-5 text-clip'>
                 We are a team of passionate developers who are passionate about building great products.
             </p>
             <div className="lg:px-24 sm:p-5">
-
-                <div className=" grid  justify-center lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5">
+                <div className=" grid  justify-center  lg:grid-cols-4 md:grid-cols-2  sm:grid-cols-1  lg:mx-5 gap-12">
                     {team?.map((item: TeamProps) => {
                         return (
                             <TeamCard
