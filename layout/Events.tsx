@@ -25,17 +25,14 @@ function Events({ events: events }: EventsProps) {
         <>
             <div className="bg-slate-800  text-center pt-20">
                 <div className="conatiner mx-auto">
-                    <h1 className='lg:text-6xl text-4xl dark:text-white font-mono'>Upcoming Events</h1>
-                    <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
-                        Checkout our upcoming events
-                        {
-                            events?.length === 0 && (
-                                <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
-                                    No events found
-                                </p>
-                            )
-                        }
-                    </p>
+                    <h1 className='lg:text-6xl text-4xl text-white font-mono'>Upcoming Events</h1>
+                    {
+                        events?.length === 0 && (
+                            <p className='text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+                                No events found
+                            </p>
+                        )
+                    }
                     <div>
                         <div className="grid p-10 justify-center items-center">
                             {
