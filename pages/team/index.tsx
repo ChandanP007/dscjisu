@@ -30,7 +30,7 @@ export default function Blog({ teams }: { teams: TeamMeta[] }) {
             <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
                 <div className="text-center">
                     <h1 className='lg:text-6xl text-3xl dark:text-white font-mono'>Team</h1>
-                    <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+                    <p className='dark:text-white font-light font-mono pb-10 text-base px-5 text-clip'>
                         We thank all the core team members for their contribution to the project, Events and the community. Without them, this community would not have been possible.
                     </p>
                 </div>
