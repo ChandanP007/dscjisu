@@ -1,0 +1,300 @@
+---
+tags: C++
+title: Working with Threads in C++
+body: In any language threads can be a very useful tool to do a certain task more efficiently by allowing the program to do multiple operations (e.g. input, processing, storage and output) at the same time. Threads can be utilised to allocate and execute different parts of a program without the interruption of the main program.
+author: Shreyos Ghosh
+date: 2022-11-14
+blogImage: /blogs/threads-in-cpp/blogimage.jpg
+authorImage: https://github.com/Shreyosgit.png
+blogslug: threads-in-cpp
+---
+
+In any language threads can be a very useful tool to do a certain task more efficiently by allowing the program to do multiple operations (e.g. input, processing, storage and output) at the same time. Threads can be utilised to allocate and execute different parts of a program without the interruption of the main program.
+
+Here, I will briefly talk about concurrency and parallelism as well as how you can implement multithreading to your C++ program.
+
+# What's a Thread?
+A thread is sequence of instructions that run in parallel to other threads within a process.
+
+> _A process is a program which is under execution i.e. when a program is loaded into the memory then it becomes a process._
+
+Now, that we know about threads, let's see the differences between concurrency and parallelism
+
+## Concurrency vs. Parallelism
+**Concurrency** is closely related to multithreading, where more than one or many threads are handled at a period of time by switching the control from one thread to another back and forth. It may seem like all the threads are being executed at the same time. As this whole process is very quick but in reality only one thread can be handled at a time. In concurrency multiple threads can communicate with each other.
+<br />
+**Parallelism** is achieved when multiple threads are handled parallel to each other in hardware resources (multi core, multi chip or many cores).
+<br />
+Let's explain these two terms with a real life example. Suppose there is one ticket counter managing two queues. Where, only one person is getting a ticket at a time but that person can be from any queue. Here, if one queue is getting served then the other queue has to wait for it's turn and vice versa. This is an example of concurrency.
+
+![Diagram of Concurrency](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/db9h07vkevi2mfvd8v0z.png)
+
+Now, if we increase the number of counters and make it two, then each queue gets their own ticket counter and they can be managed in a parallel manner.
+
+![Diagram of Parallelism](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/424y8u3yh5xkebnen7a7.png)
+
+Here, as we can see each counter can only handle one customer or queue at a time. Similarly, consider these queues as a thread and counters as a core of a CPU with each core having the ability to handle only one thread at once, that's what we call a single-threaded core.
+Now if you have two threads to run in a single-threaded core, then you need to run them in a concurrent manner(i.e. having two queues with only one counter).
+But when you have more than one single-threaded core then you have the ability to run those two threads parallelly(i.e. having two queues with two counter/one counter each).
+
+> _Concurrency --> Illusion_<br />_Parallelism --> True Concurrency_
+
+Nowadays, we can actually run two threads in one core at once (you can visualize them as a bigger core is logically divided into two sub-core/smaller-core) which is also termed as **hyperthreading**.
+
+> _For those who have confusion with the term "thread" being used by those CPU manufacturing companies vs. in software. What these companies mean by saying their CPU has "X" amount of threads, is actually how many threads that the CPU can run parallelly. But this doesn't mean that your CPU is limited to run only "X" amount of threads. Obviously, your CPU can run thousands of threads concurrently, but in that case, some threads will have to share hardware resources._
+
+# Managing Threads:
+Up to this point, we've gained a little bit of understanding about multithreading. So let's have a look on how we can launch/create multiple threads in our C++ code.
+
+## Create a Thread:
+There are three possible ways that we can create a thread. Which are,
+
+-  **Using Function Pointer**
+
+-  **Using Function Object**
+
+-  **Using Lambda Expression**
+
+Note: To work with threads, we will have to use the standard library header `<thread>`. Every C++ program has at least one thread on which `main()` is called at program startup, it is called as a **main thread**.
+
+### Using Function Pointer:
+Here, we will pass a **function pointer** as a task for the **thread object** of `std::thread` **class**.
+
+```cpp
+1. void my_task(parameters);  //callable function
+2. std::thread my_worker(my_task, parameters);  //construction of
+   //thread object specifying the task.
+```
+
+_`Code Example:`_
+```cpp
+#include <iostream>
+#include <thread>
+
+void my_task(std::string name) {
+    std::cout << "Hello world of " << name << "\n";
+}
+int main() {
+    std::thread my_worker(my_task, "thread!");
+    my_worker.join();
+    return 0;
+}
+```
+
+_`Explanation:`_
+
+As I said, we are passing a function pointer `my_task` as a task to the thread object `my_worker` and as soon as the construction of the thread object is done, the thread starts the execution of the said task.
+
+> _In total there is two threads present in the above program, one is the **main thread** and another one is the **worker thread**._
+
+Notice, that here I used thread join method `join()`, which we'll talk about later.
+
+### Using Function Object:
+**Function object** which is also called as a **functor**, can be used to pass a callable **object**/**instance** of a class as a task to the thread object by overloading the function call operator `()` using operator function.
+
+> _**object** + **()** = **functor**/**function object**_
+
+```cpp
+1. class my_functor {  //function object class
+   public:
+       void operator()(parameters) {  //operator function 
+           //task list                //overloading () operator
+       }
+   };
+2. my_functor Functor;  //declaration of object
+3. std::thread my_worker(Functor, parameters);  //construction
+   //of thread object using functor
+```
+
+_`Code Example:`_
+```cpp
+#include <iostream>
+#include <thread>
+
+class my_functor {
+public:
+    //operator overloading
+    void operator()(std::string name) {
+        std::cout << "Hello it's me, " << name;
+    }
+};
+int main(){
+    my_functor Functor;
+    std::thread my_worker(Functor, "Functor!");
+    my_worker.join();
+    return 0;
+}
+```
+
+_`Explanation:`_
+
+Here, we are passing a function object `Functor()` which belongs to the function object class `my_functor` as a task to the thread object `my_worker`, by overloading the function call operator/parenthesis operator `()`.
+
+### Using Lambda Expression
+A **lambda Expression**, which consists of a nameless function, can be passed as a task (i.e. a callable type) to the **thread object**.
+
+```cpp
+1. auto my_lambda_exp = [capture clause](parameters) {
+         //task list                    //lambda expression
+   };
+2. std::thread my_worker (my_lambda_exp, parameters);
+   //construction of thread object using lambda expression
+```
+
+_`Code Example:`_
+```cpp
+#include <iostream>
+#include <thread>
+
+auto my_lambda_exp = [](std::string name){
+    std::cout << "Hello " << name;
+};
+
+int main() {
+    std::thread my_worker (my_lambda_exp, "World!");
+    my_worker.join();
+    return 0;
+}
+```
+
+_`Explanation:`_
+
+Here, we are using a variable `my_lambda_exp` and passing it as a callable type for the thread object `my_worker` .
+The lambda expression
+`[](std::string name){std::cout << "Hello " << name;}` ,
+which is assigned to the variable `my_lambda_exp` can also be used as task for the thread object.
+
+_`Code Snippet:`_
+```cpp
+std::thread my_worker ([](std::string name){
+    std::cout << "Hello " << name;
+}, "World!");
+```
+For this case, you don't need to assign the lambda expression to a variable. You can put it directly and it will be treated as a callable type. Both of the given examples will work the same.
+
+Now, it's time to talk about that `join()` method that we previously used.
+
+## Join and Detach a Thread
+When you launch a thread object, as said the thread will start the process of execution. At this point, you have the main thread and a worker thread running.
+Now, you have two options either you can use `join()` i.e. pause the main thread and wait for the worker thread to complete the task and then continue the main thread execution or you can use `detach()` and continue the main thread execution and forget about the worker thread.
+
+> _It is mandatory to either join or detach a thread before the main program execution is completed or it will be considered as an error and the_ `std::terminate` _will be called by the thread destructor_ `std::thread::~thread` _for garbage collection._
+
+### Joining a thread
+Let me give you a code example, 
+
+```cpp
+1. void my_work(parameters);  //callable function
+2. std::thread my_worker(my_work, parameters);  //construction of
+   //thread object passing the task
+3. my_worker.join();  //joining the worker thread
+```
+
+_`Code Example:`_
+```cpp
+#include <iostream>
+#include <thread>
+
+void my_work(int count) {
+    while(count++ < 2){
+        std::cout << "Worker thread is working..." << "\n";
+    }
+    std::cout << "The task is completed!" << "\n";
+}
+int main() {
+    std::cout << "This is main thread!" << "\n";
+    std::thread my_worker(my_work, 0);
+    my_worker.join();
+    std::cout << "Main thread execution completed!" << "\n";
+    return 0;
+}
+```
+
+_`Code Output:`_
+
+```cpp
+ This is main thread!
+ Worker thread is working...
+ Worker thread is working...
+ The task is completed!
+ Main thread execution completed!
+```
+
+_`Explanation:`_
+
+![Thread Joining](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/elpfal4kd34oeltzvx65.png)
+
+In the above program, after passing the function pointer `my_work` to the thread object `my_worker`, we've called the `join()` method and because of this, the main thread execution will be paused until the given task for the worker thread is done.
+
+Before talking about the detach method, let's understand
+
+### What is `joinable()`?
+`std::thread::`joinable is a method used to check if a thread has been joined/detached or not.
+By default, every constructed thread object is joinable, Which means `joinable() == true`.
+If not changed as usual this will trigger an error and the destructor `std::thread::~thread` will terminate the program by the end of the main program execution. Once a thread object is joined/detached `joinable() == false`. 
+
+### Detaching a thread
+Let's say you're in such a scenario, where you don't want to pause the execution of the main program or the task for the worker thread is going to take a lot of time that you can't afford to wait on. That's when you can use `detach()` to run your thread in the background.
+
+By using detach method we can execute the main thread and the worker thread (i.e. the caller thread and the called thread) independently from each other. And as soon as either one's execution ends, the thread destructor `std::thread::~thread` will be called and the resources will be released.
+
+```cpp
+1. void my_work(parameters);  //callable function
+2. std::thread my_worker(my_work, parameters);  //construction of
+   //thread object passing the task
+3. my_worker.detach();  //detaching the worker thread
+```
+
+_`Code Example:`_
+```cpp
+#include <iostream>
+#include <chrono>
+#include <thread>
+using namespace std::this_thread;
+using namespace std::chrono;
+
+void my_work(int count) {
+    while(count++ < 2){
+        std::cout << "Worker thread is working..." << "\n";
+    }
+    std::cout << "The task is completed!" << "\n";
+}
+int main() {
+    std::cout << "This is main thread!" << "\n";
+    std::thread my_worker(my_work, 0);
+    my_worker.detach();
+    std::cout << "Main thread execution completed!" << "\n";
+    //sleep_until(system_clock::now() + seconds(2));
+    return 0;
+}
+```
+
+_`Code Output:`_
+
+```cpp
+This is main thread!
+Main thread execution completed!
+```
+
+_`Explanation:`_
+
+![Thread Detaching](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nw1e42tzds71xoo3c5ta.png)
+
+I previously said that as soon as the construction of the thread object(of the worker thread) is done, the thread(worker thread) starts the execution of the said task.
+
+Now there is a little more to be told! Let me explain...
+
+When we construct a thread object and pass a callable type to it, first the OS collects the request and only then it initiates the execution. This whole operation is not instantaneous.
+<br />
+Now when you're using the detach method, that means the main thread won't be paused rather it'll continue to run until the flow of the program reaches the end. Which is much quicker in this case. That's why we are not getting the desired output from the worker thread.
+But if you **undo the commented line** in the above code, which will let the worker thread to complete it's task by putting the main program into sleep for 2 seconds, then you'll get this output
+<br />
+_`Code Output:`_
+
+```cpp
+This is main thread!
+Main thread execution completed!
+Worker thread is working...
+Worker thread is working...
+The task is completed!
+```
