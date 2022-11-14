@@ -8,7 +8,7 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
         <>
             <Head>
 
-                <title>Blog | DSC JISU</title>
+                <title>Blog | DSC JIS University</title>
                 <meta name="keywords" content="gdsc, jis university , jisu, gdsc jisu, kolkata" />
                 <meta name="description" content="The Google Developer Student Club, JIS UNIVERSITY, 💐 welcomes all of you wholeheartedly. We Welcome students to grow and learn together.
                     We at JIS University build a peer-to-peer learning process making a better environment for students to learn and develop.
@@ -22,7 +22,7 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
                         Thanks to our community for writing these blogs.
                     </p>
                 </div>
-                <div className='grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5 justify-items-center'>
+                <div className='grid  lg:grid-cols-4 md:grsid-cols-2 m:grid-cols-1  lg:mx-5 self-center justify-items-center content-center'>
                     {
                         blogs.map((blog) => (
                             <BlogCard key={blog.slug}

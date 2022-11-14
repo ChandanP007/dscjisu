@@ -23,11 +23,11 @@ export default function Team({ team }: team) {
     return (
         <div className=" py-20 text-center bg-slate-900 px-5">
             <h1 className='lg:text-6xl text-4xl text-white font-mono'>Organizers</h1>
-            <p className='text-white font-light font-mono pt-6 text-base px-5 text-clip'>
+            <p className='text-white font-light font-mono pb-3 text-base px-5 text-clip'>
                 We are a team of passionate developers who are passionate about building great products.
             </p>
-            <div className="lg:px-24 sm:p-5">
-                <div className=" grid  justify-center  lg:grid-cols-4 md:grid-cols-2  sm:grid-cols-1  lg:mx-5 gap-12">
+            <div className='px-2'>
+                <div className="grid  lg:grid-cols-3 md:grsid-cols-2 sm:grid-cols-1  lg:mx-5 gap-10 content-center place-items-center">
                     {team?.map((item: TeamProps) => {
                         return (
                             <TeamCard

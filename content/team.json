@@ -1,4 +1,14 @@
 [{
+        "id": "GDSCH002",
+        "name": "Saptarshi Bandopadhyay",
+        "type": "Head",
+        "role": "Co Orgainer",
+        "linkedin": "https://www.linkedin.com/in/saptarshi-bandopadhyay-4b4113214/",
+        "github": "https://github.com/Saptarshi-Bandopadhyay",
+        "tagline": "",
+        "image": "https://avatars.githubusercontent.com/u/88289395?v=4"
+    },
+    {
         "id": "GDSCL001",
         "name": "Abhishek Kushwaha",
         "role": "Lead",
@@ -9,23 +19,13 @@
         "image": "https://avatars.githubusercontent.com/u/86338762?v=4"
     },
     {
-        "id": "GDSCH002",
-        "name": "Saptarshi Bandopadhyay",
-        "type": "Head",
-        "role": "Community Head",
-        "linkedin": "https://www.linkedin.com/in/saptarshi-bandopadhyay-4b4113214/",
-        "github": "https://github.com/Saptarshi-Bandopadhyay",
-        "tagline": "",
-        "image": "https://avatars.githubusercontent.com/u/88289395?v=4"
-    },
-    {
         "id": "GDSCH003",
         "name": "Chandan Pandey",
         "type": "Head",
-        "role": "Technical Head",
+        "role": "Co Orgainer",
         "linkedin": "https://www.linkedin.com/in/chandanp007/",
         "github": "https://github.com/ChandanP007",
-        "tagline": "",
+        "tagline": "That DevOps Guy",
         "image": "https://avatars.githubusercontent.com/u/95927947?v=4"
     },
     {

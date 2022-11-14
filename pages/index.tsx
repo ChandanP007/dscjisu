@@ -10,8 +10,8 @@ import Header from '../layout/Header';
 // import Landing from '../layout/Landing';
 import Agenda from '../layout/agenda';
 import Connect from '../layout/Connect';
+import Gallery from '../layout/gallery';
 import Team from '../layout/Team';
-
 export async function getStaticProps() {
 
   // const team_data = await fetch("http://localhost:3000/api/team");
@@ -70,10 +70,11 @@ const Home = ({ team, event, community }: any) => {
         <Header />
         <Agenda />
         <Events events={event} />
-        <Team team={team.slice(0, 8)} />
+        <Team team={team.slice(0, 3)} />
         <Connect />
         <Community community={community} />
         <Chapter />
+        <Gallery />
         {/* <SpeedDail /> */}
       </main>
     </>
