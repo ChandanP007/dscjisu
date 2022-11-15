@@ -9,11 +9,15 @@ import Events from '../layout/Events';
 import Header from '../layout/Header';
 // import Landing from '../layout/Landing';
 import Agenda from '../layout/agenda';
+import Blog from '../layout/blog';
 import Connect from '../layout/Connect';
 import Gallery from '../layout/gallery';
 import Team from '../layout/Team';
-export async function getStaticProps() {
 
+
+
+
+export async function getStaticProps() {
   // const team_data = await fetch("http://localhost:3000/api/team");
   // const event_data = await fetch("http://localhost:3000/api/event");
   // const community_data = await fetch("http://localhost:3000/api/community");
@@ -61,7 +65,6 @@ const Home = ({ team, event, community }: any) => {
         <meta property="og:description" content="" />
         <meta property="og:url" content="https://gdsc.community.dev/jis-university-kolkata/" />
         <meta property="og:type" content="website" />
-        <meta property="og:ttl" content="777600" />
         <meta property="og:locale" content="en_US" />
       </Head>
 
@@ -70,6 +73,7 @@ const Home = ({ team, event, community }: any) => {
         <Header />
         <Agenda />
         <Events events={event} />
+        <Blog />
         <Team team={team.slice(0, 3)} />
         <Connect />
         <Community community={community} />
