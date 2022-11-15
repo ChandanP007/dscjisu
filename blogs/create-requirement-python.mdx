@@ -1,0 +1,159 @@
+---
+tags: python
+title: How to create requirements.txt python
+body: A requirement.txt python file is a type of file that usually stores information about all the libraries, modules, and packages which are specific to project that are used while developing a particular project.
+author: Abhishek Kushwaha
+date: 2022-11-16
+blogImage: /blogs/create-requirement-python/blogimage.png
+authorImage: https://github.com/Abbhiishek.png
+blogslug: create-requirement-python
+---
+
+# How to create requirements.txt python
+
+A requirement.txt python file is a type of file that usually stores information about all the libraries, modules, and packages which are specific to project that are used while developing a particular project.
+This article will guide us in how to create requirements.txt file python and installing dependencies from the requirements.txt file. We would be looking into various ways to creating requirements.txt Python.
+
+## Need for Requirements.txt File
+
+While working on Python Projects, we have probably noticed a file called requirements.txt. This requirements.txt file is used for specifying what python packages are required to run the project. It stores the information of what packages with specified version is needed for running the particular project.With a requirement.txt file we can get started with the application and install all the required dependencies in a single command. This plays a crucial role as we start developing our python application , we would be using specific version of packages . Any change in the version might break your code. Globally we might have installed a large number of packages but in particular project we might need fewer.
+
+## PROBLEMS WITH THE TRADITIONAL requirements.txt FILES
+
+Traditionally, we create a requirements.txt file by creating a virtual environment. After activating a virtual environment, we have to run the command as follows:
+
+`pip freeze > requirements.txt`
+
+It works fine, but the problem with this approach is that it includes all the packages that are installed via pip install `<package_name>` and the sub-dependency packages.Going with this approach adds up a lot of sub packages which are not required to install manually and comes with main packages installation. Listing these all makes the file long.
+
+Let’s consider the following scenario:
+We are working on Django based application, and the only package we have installed is Fastapi through the command :
+
+`pip install fastapi`
+
+However, when we tried to put all the installed packages into the requirements.txt file apart from Django, additional packages were installed internally by pip for Fastapi. To avoid this, we can use the grep command to filter for only required packages.
+The command to pass the standard output from pip freeze to grep is as follows :
+
+`pip freeze | grep -i fastapi >> requirements.txt`
+
+> The | command is called a pipe. It is used to pipe, or transfer, the standard output from the command on its left into the standard input of the command on its right.
+
+> The shell command grep is used to search files for lines that match a pattern and returns the results. Various options can be specified along with the grep command to specify the search.
+
+## What is a virtual environment?
+
+In basic, a virtual environment is an isolated environment for python projects. It allows you to create an isolated environment for each python project. This makes it easier for us to manage packages and dependencies throughout projects, especially where they share the same dependencies. Various ways exist to create a virtual environment and make a requirements.txt file. Some of them are as follows :
+
+- **virtualenv** - Virtualenv is a library that allows us to execute a virtual environment.
+- **pipenv** - Pipenv is a dependency manager for Python projects.
+- **Pipreqs** - Pipreqs is another alternative that works without creating a virtual environment in first place.
+
+Once the virtual environment is created for our project, let’s see how we can use different packages to generate a requirements.txt file. Let’s first explore how to use the Virtualenv packages.
+
+## Working with Virtualenv
+
+Virtualenv is a library that allows us to execute a virtual environment. To install and work with it, you can install it through the following pip command:
+
+`pip install virtualenv`
+
+After installation and setting up the environment, we need to activate the environment using the source :
+
+`source name_of_env/bin/activate`
+
+> **source** is a shell built-in command which is used to read and execute the content of a file(generally set of commands), passed as an argument in the current shell script.
+
+![](https://hackmd.io/_uploads/BJGzEhss5.png)
+
+Once the virtual environment is activated, the name of your virtual environment will appear on the left side of the terminal. This will let you know that the virtual environment is currently active.
+
+Now you can install dependencies related to the project in this virtual environment. For example, if you use Fastapi 0.77.1 for a project, you can install it like other packages.
+
+### How to Get the Requirements.txt File: Using Virtualenv
+
+Creation of a requirements.txt through Virtualenv could be done through a pip freeze command following Redirecting command to requirements.txt file.
+
+Firstly , what pip freeze would generate is a list of packages that are required or installed through pip commands , following with the > symbol which takes all the generated text or names as output and gives to requirements.txt file as input. If requirements.txt file is absent before the command execution , a new file would be created itself by the same command.
+
+> The `>` symbol is used to redirect output by taking the output from the command on the left and passing as input to the file on the right.
+
+```bash
+pip3 freeze > requirements.txt
+
+```
+
+![](https://hackmd.io/_uploads/Byjg4njo9.png)
+
+## How to Get the Requirements.txt File: Using Pipenv
+
+Pipenv is a Python packaging tool that solves common problems associated with the typical workflow using pip, virtualenv, and the good old requirements.txt. To get started with installation, we can follow the below-mentioned commands :
+
+### Install
+
+```python
+pip install pipenv
+```
+
+![](https://hackmd.io/_uploads/S1j572soc.png)
+
+### Install Your Packages for the project
+
+Once we are done installing pipenv, we can effectively forget about pip since Pipenv essentially acts as a replacement in place of pip. It also introduces two new files, the Pipfile (meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
+This Pipfile would be containing all the packages and sub-packages which are being installed by pip command or externally by other packages. Pipenv uses pip and virtualenv under the hood but simplifies their usage with a single command line interface.
+
+```bash
+pipenv install package
+
+```
+
+### Activate Virtual Env
+
+```bash
+pipenv shell
+
+```
+
+### Run a script in the virtual env
+
+```bash
+pipenv run python myscript.py
+```
+
+Pipenv is a dependency manager for Python projects. It is similar to those tools if you’re familiar with Node.js’ npm or Ruby’s bundler. Pipenv is recommended as it simplifies dependency management for everyday use cases. Pipenv manages dependencies on a per-project basis.
+
+![](https://hackmd.io/_uploads/ByapXhji9.png)
+
+By default, it generates a Pipfile which contains all the packages that are installed by pip command or being installed by external packages with their mentioned versions. Whereas if we want, we can also generate a requirements.txt file following the below-mentioned command:
+
+`pipenv -r lock >> requirements.txt`
+
+## How to Get the Requirements.txt File: Without VirtualEnv using Pipreqs
+
+Pipreqs is another alternative that doesn’t require you to create a virtual environment first.This method automatically generate python dependencies for python project management.
+It generates requirements.txt file based on the modules & packages you import in your project.This helps in not including extra installed libraries that are not being used by the python project.
+Let us see how to work with it.
+
+### Installation
+
+`pip install pipreqs`
+
+Once the pipreqs are installed, we can directly generate a requirements.txt file without creating a Virtual Environment. We have to point the path to our project folder or directory.
+
+```bash
+pipreqs /path/to/project
+```
+
+![](https://hackmd.io/_uploads/HJPD7nisc.png)
+
+Pipreqs uses imports of projects to generate a requirements.txt file. So, it is essential to note that pipreqs will not include the external plugins required by the projects.These plugins might me used internally by the packages. You need to add those manually in a requirement.txt for such cases.
+
+# Conclusion
+
+- In Python, a requirements.txt file is a type of file that usually stores information about all the libraries, modules, and packages in itself that are used while developing a particular project.
+
+- The most common way of creating a requirements.txt file is to run pip freeze > requirements.txt when all packages are already installed.
+
+- Pipenv is a Python packaging tool that solves common problems associated with the typical workflow using pip, virtualenv, and the good old requirements.txt.
+- Pipenv essentially acts as a replacement in place of pip. It also introduces two new files, the Pipfile (meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
+
+- Pipreqs is the other simple alternative that doesn’t require you to create a virtual environment first. This is quite useful and easy to operate. It generates a requirement.txt file based on the import statements of the project.
+- Pipreqs uses imports of projects to generate a requirements.txt file. So, it is essential to note that pipreqs will not include the external plugins required for specific projects.
