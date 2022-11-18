@@ -27,7 +27,7 @@ export default function Team({ team }: team) {
                 We are a team of passionate developers who are passionate about building great products.
             </p>
             <div className='px-2'>
-                <div className="grid  lg:grid-cols-3 md:grsid-cols-2 sm:grid-cols-1  lg:mx-5 gap-10 content-center place-items-center">
+                <div className="flex lg:flex-row justify-center flex-col text-center">
                     {team?.map((item: TeamProps) => {
                         return (
                             <TeamCard

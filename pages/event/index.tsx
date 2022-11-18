@@ -9,10 +9,10 @@ export default function Blog({ events }: { events: EventMeta[] }) {
             <Head>
                 <title>Events | Google Developer Student Clubs JIS University - Kolkata</title>
             </Head>
-            <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
+            <div className='lg:p-20 sm:p-2  flex  flex-col  bg-slate-900 py-10'>
                 <div className="text-center">
-                    <h1 className='lg:text-6xl text-3xl dark:text-white font-mono'><span className='underline decoration-solid underline-offset-2 decoration-cyan-300 font-mono community'>Events</span></h1>
-                    <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+                    <h1 className='lg:text-6xl text-3xl text-white font-mono'><span className='underline decoration-solid underline-offset-2 decoration-cyan-300 font-mono community'>Events</span></h1>
+                    <p className='text-white font-light font-mono pt-5 text-base px-5 text-clip'>
                         Thanks to our community for organizing these events.
                     </p>
                 </div>

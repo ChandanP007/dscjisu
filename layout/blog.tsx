@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Blog() {
@@ -9,6 +10,14 @@ export default function Blog() {
                         <div className="flex flex-col items-center justify-center h-full">
                             <h1 className="text-4xl font-bold text-white">Blog</h1>
                             <p className="text-white font-bold">Check Out Our blogs</p>
+                        </div>
+
+                        <div className="p-5 flex justify-center">
+                            <Link href="/blog" passHref>
+                                <button className="bg-yellow-400 p-5 rounded-lg">
+                                    <h1 className=' text-black font-mono'>Explore Blogs</h1>
+                                </button>
+                            </Link>
                         </div>
 
                     </div>

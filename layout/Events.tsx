@@ -1,3 +1,4 @@
+import Link from "next/link"
 import EventCard from "../components/cards/event/EventCard"
 
 interface EventProps {
@@ -58,6 +59,14 @@ function Events({ events: events }: EventsProps) {
                                 })}
                         </div>
 
+                    </div>
+
+                    <div className="p-5">
+                        <Link href="/event" passHref>
+                            <button className="bg-yellow-400 p-5 rounded-lg">
+                                <h1 className=' text-black font-mono'>View Past Events</h1>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
