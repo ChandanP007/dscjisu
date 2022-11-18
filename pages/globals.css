@@ -146,6 +146,7 @@ article div {
 article {
     color: white;
     background-color: black;
+    overflow: hidden;
 }
 
 article h1 {
