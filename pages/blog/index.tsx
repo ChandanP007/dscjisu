@@ -15,14 +15,14 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
                     This year our Club is aiming to organize resourceful Bootcamps and Interesting Workshops. The major idea is to learn new skills through hands-on workshops and create innovative projects which will help in the betterment of our society." />
 
             </Head>
-            <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
+            <div className='lg:p-20 sm:p-2  flex  flex-col  bg-slate-900 py-10'>
                 <div className="text-center">
-                    <h1 className='lg:text-6xl text-3xl dark:text-white font-mono'><span className='underline decoration-solid underline-offset-2 decoration-cyan-300 font-mono community'>Blogs</span></h1>
-                    <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+                    <h1 className='lg:text-6xl text-3xl text-white font-mono'><span className='underline decoration-solid underline-offset-2 decoration-cyan-300 font-mono community'>Blogs</span></h1>
+                    <p className='text-white font-light font-mono pt-5 text-base px-5 text-clip'>
                         Thanks to our community for writing these blogs.
                     </p>
                 </div>
-                <div className='grid  lg:grid-cols-4 md:grsid-cols-2 m:grid-cols-1  lg:mx-5 self-center justify-items-center content-center'>
+                <div className='grid  lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5 self-center justify-items-center content-center'>
                     {
                         blogs.map((blog) => (
                             <BlogCard key={blog.slug}
