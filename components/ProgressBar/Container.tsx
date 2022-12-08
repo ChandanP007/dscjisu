@@ -1,4 +1,4 @@
-export const Container = ({ animationDuration, children, isFinished }) => (
+export const Container = ({ animationDuration, children, isFinished }: any) => (
     <div
         className='pointer-events-none'
         style={{
