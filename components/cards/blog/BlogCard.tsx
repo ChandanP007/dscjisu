@@ -20,7 +20,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, dat
   return (
     < >
       <Link href={`/blog/${blogslug}`} passHref >
-        <div className="cursor-pointer text-start">
+        <div className="cursor-pointer text-start hover:scale-105 ease-linear duration-200">
           <div className={styles.container}>
             <div className={styles.card}>
               <div className={styles.card__header}>
