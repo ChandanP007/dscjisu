@@ -1,6 +1,5 @@
 import Head from "next/head";
 import TeamCard from "../../components/cards/team/TeamCard";
-import TeamData from "./../../content/team.json";
 
 interface TeamMeta {
 
@@ -16,8 +15,14 @@ interface TeamMeta {
 }
 
 export async function getStaticProps() {
-    const teams = TeamData
-    return { props: { teams } };
+    const members = await fetch('http://localhost:3000/api/team', {
+        method: 'GET',
+    });
+    const TeamData = await members.json();
+    console.log(TeamData);
+
+
+    return { props: { teams: TeamData } };
 }
 
 

@@ -25,7 +25,7 @@ function Events({ events: events }: EventsProps) {
     return (
         <>
             <div className="bg-slate-800  text-center pt-20">
-                <div className="conatiner mx-auto">
+                <div className="conatiner mx-auto lg:mx-24">
                     <h1 className='lg:text-6xl text-4xl text-white font-mono'>Upcoming Events</h1>
                     {
                         events?.length === 0 && (
@@ -34,8 +34,8 @@ function Events({ events: events }: EventsProps) {
                             </p>
                         )
                     }
-                    <div>
-                        <div className="grid p-10 justify-center items-center">
+                    <div className="">
+                        <div className="grid grid-cols-2 gap-4 p-10 justify-center items-center">
                             {
                                 events?.map((item: EventProps) => {
                                     return (

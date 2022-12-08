@@ -17,7 +17,7 @@ export interface ITeamCard {
 const TeamCard: React.FC<ITeamCard> = ({ github, id, image, name, linkedin, role, tagline, twitter }) => {
   return (
     <>
-      <div className=' m-5 p-5 lg:h-[450px] lg:w-[420px]    bg-shadow-2xl  dark:shadow-grey-400    rounded-xl   transition-all duration-200 ease-in  hover:scale-105  '
+      <div className=' m-5 p-5    bg-shadow-2xl  dark:shadow-grey-400    rounded-xl   transition-all duration-200 ease-in  hover:scale-105  '
         key={id} title={
           name + " " + role + " " + tagline
         } >
@@ -25,7 +25,7 @@ const TeamCard: React.FC<ITeamCard> = ({ github, id, image, name, linkedin, role
           <Avatar src={image} alt={name} sx={{ width: 190, height: 190 }} className={`z-[0] shadow-lg border-4 border-cyan-200 people-card--avatar`} />
         </div>
         <div className="p-5 font-mono text-white">
-          <h1 className='text-3xl text-center font-mono text-clip'>{name}</h1>
+          <h1 className='text-xl text-center font-mono text-clip'>{name}</h1>
           <div className="flex flex-row text-center justify-center gap-2 pb-4">
             <a href={linkedin} target="_blank" rel="noopener noreferrer" className='text-center text-blue-900 hover:text-blue-500'>
               <LinkedInIcon />

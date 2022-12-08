@@ -4,6 +4,9 @@ import { getAllPosts, PostMeta } from "../../lib/blog";
 
 
 export default function Blog({ blogs }: { blogs: PostMeta[] }) {
+
+
+
     return (
         <>
             <Head>

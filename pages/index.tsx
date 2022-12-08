@@ -1,8 +1,7 @@
 // import SpeedDail from '../components/speedDail';
 import Head from 'next/head';
 import CommunityData from '../content/community.json';
-import EventData from '../content/events.json';
-import TeamData from '../content/team.json';
+// import EventData from '../content/events.json';
 import Chapter from '../layout/Chapter';
 import Community from '../layout/Community';
 import Events from '../layout/Events';
@@ -29,15 +28,28 @@ export async function getStaticProps() {
   //   return (b.id) - (a.id);
   // });
 
-  const Team = TeamData;
-  const Event = EventData;
+  const res = await fetch('http://localhost:3000/api/event', {
+    method: 'GET',
+  });
+  const EventData = await res.json();
+  console.log(EventData);
+
+
+  const members = await fetch('http://localhost:3000/api/team', {
+    method: 'GET',
+  });
+  const TeamData = await members.json();
+  // const Event = EventData;
   const Community = CommunityData;
 
 
   return {
     props: {
-      team: Team,
-      event: Event.filter((event) => event.isCompleted === false),
+      team: TeamData,
+      // event: EventData.sort(
+      //   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      // ),
+      event: EventData.filter((event) => event.isCompleted === false),
       community: Community
     }, // will be passed to the page component as props
   }

@@ -1,11 +1,19 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import TeamData from "../../content/team.json";
-
+import connectMongo from "../../lib/ConnectDb";
+import TeamSchema from "../../models/team";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-    const community = TeamData;
+    const method = req.method;
+    if (method === "GET") {
+        await connectMongo();
+        const events = await TeamSchema.find({});
+        res.status(200).json(events);
+        res.send(events);
+    }
 
-    res.status(200).json(community);
+    else {
+        res.status(400).json({ message: "Invalid request" });
+    }
 }
 
 
