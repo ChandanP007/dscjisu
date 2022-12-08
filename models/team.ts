@@ -1,6 +1,17 @@
 import mongoose from "mongoose";
 
-const TeamSchema = new mongoose.Schema({
+type Team = {
+    id: string;
+    name: string;
+    role: string;
+    linkedin: string;
+    github: string;
+    tagline: string;
+    image: string;
+};
+
+
+const TeamSchema = new mongoose.Schema<Team>({
     id: {
         type: String,
         required: true,

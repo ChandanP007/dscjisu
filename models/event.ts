@@ -1,6 +1,22 @@
 import mongoose from "mongoose";
 
 
+type Event = {
+    id: string;
+    name: string;
+    description: string;
+    date: string;
+    type: string;
+    slug: string;
+    eventpic: string;
+    eventbanner: string;
+    eventLink: string;
+    isActive: boolean;
+    isCompleted: boolean;
+    locationName: string;
+    locationUrl: string;
+};
+
 // "id": "11",
 //     "name": "A Guide to Cybersecurity & Cyberspace",
 //     "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview or in learning about the software development roadmap.",
@@ -13,7 +29,7 @@ import mongoose from "mongoose";
 //     "isCompleted": false,
 //     "locationName": "Online",
 // "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-a-guide-to-cybersecurity-cyberspace/"
-const EventSchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema<Event>({
     id: {
         type: String,
         required: true,
