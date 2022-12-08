@@ -1,36 +1,13 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import NextNProgress from 'nextjs-progressbar';
 import Footer from '../components/layouts/Footer';
 import Navbar from '../components/layouts/Navbar';
-import { useProgressStore } from '../components/ProgressBar';
-import { Progress } from '../components/ProgressBar/Progress';
 import './globals.css';
 
 function MyApp({ Component, pageProps }: any) {
   // Use the layout defined at the page level, if available
   // const getLayout = Component.getLayout || ((page) => page);
-  const setIsAnimating = useProgressStore((state) => state.setIsAnimating);
-  const isAnimating = useProgressStore((state) => state.isAnimating);
-  const router = useRouter();
-  useEffect(() => {
-    const handleStart = () => {
-      setIsAnimating(true);
-    };
-    const handleStop = () => {
-      setIsAnimating(false);
-    };
 
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleStop);
-    router.events.on('routeChangeError', handleStop);
-
-    return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleStop);
-      router.events.off('routeChangeError', handleStop);
-    };
-  }, [router]);
 
 
   return (
@@ -58,7 +35,14 @@ function MyApp({ Component, pageProps }: any) {
         <meta property="og:locale" content="en_US" />
       </Head>
       <Navbar />
-      <Progress isAnimating={isAnimating} />
+      <NextNProgress
+        color="#62B6B7"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+        options={{ easing: 'ease', speed: 500 }}
+      />
+
       <Component {...pageProps} />
       <Footer />
     </>
