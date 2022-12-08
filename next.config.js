@@ -12,6 +12,7 @@ const nextConfig = {
   images: {
     domains: ['i.pravatar.cc', 'res.cloudinary.com', "avatars.githubusercontent.com", "github.com", "upload.wikimedia.org", "e7.pngegg.com", "play-lh.googleusercontent.com"],
   },
+  output: 'standalone',
 };
 
 module.exports = withPWA(nextConfig);

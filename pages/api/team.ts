@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const method = req.method;
     if (method === "GET") {
         await connectMongo();
-        const events = await TeamSchema.find({});
+        const events = await TeamSchema.find < ({});
         res.status(200).json(events);
         // res.send(events);
     }

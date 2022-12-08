@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import { model, models, Schema } from 'mongoose';
 
-type Team = {
+interface ITeam {
     id: string;
     name: string;
     role: string;
@@ -8,10 +8,10 @@ type Team = {
     github: string;
     tagline: string;
     image: string;
-};
+}
 
 
-const TeamSchema = new mongoose.Schema<Team>({
+const TeamSchema = new Schema<ITeam>({
     id: {
         type: String,
         required: true,
@@ -43,4 +43,5 @@ const TeamSchema = new mongoose.Schema<Team>({
     }
 });
 
-export default mongoose.models.Team || mongoose.model("Team", TeamSchema);
+export default models.Team || model<ITeam>('Team', TeamSchema);
+

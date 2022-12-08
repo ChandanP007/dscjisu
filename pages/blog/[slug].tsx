@@ -78,7 +78,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 rehypeSlug,
                 [rehypeAutolinkHeadings, { behavior: "wrap" }],
                 rehypeHighlight,
-                [toc, {}],
+                [toc, {
+                    headings: "h1, h2, h3, h4, h5, h6",
+                    tight: true,
+                    className: "toc",
+                    slug: (text) => text.toLowerCase().replace(/\s/g, "-"),
+
+                }],
             ],
             remarkPlugins: [remarkGfm],
         },

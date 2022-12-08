@@ -30,7 +30,7 @@ export default function Blog({ teams }: { teams: TeamMeta[] }) {
     return (
         <>
             <Head>
-                <title>Projects | Google Developer Student Clubs JIS University - Kolkata</title>
+                <title>Teams | Google Developer Student Clubs JIS University - Kolkata</title>
             </Head>
             <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
                 <div className="text-center">
