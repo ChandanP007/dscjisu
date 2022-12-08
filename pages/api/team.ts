@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await connectMongo();
         const events = await TeamSchema.find({});
         res.status(200).json(events);
-        res.send(events);
+        // res.send(events);
     }
 
     else {

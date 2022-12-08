@@ -32,7 +32,7 @@ export async function getStaticProps() {
     method: 'GET',
   });
   const EventData = await res.json();
-  console.log(EventData);
+  // console.log(EventData);
 
 
   const members = await fetch('http://localhost:3000/api/team', {
@@ -49,7 +49,7 @@ export async function getStaticProps() {
       // event: EventData.sort(
       //   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
       // ),
-      event: EventData.filter((event) => event.isCompleted === false),
+      event: EventData.filter((event: any) => event.isCompleted === false),
       community: Community
     }, // will be passed to the page component as props
   }
