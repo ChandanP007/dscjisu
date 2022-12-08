@@ -1,5 +1,11 @@
+interface AgendaCardProps {
+    title: string;
+    description: string;
+}
 
-const AgendaCard = ({ title, description }) => {
+
+
+const AgendaCard = ({ title, description }: AgendaCardProps) => {
     return (
         <div className="bg-gradient-to-tr from-[#E94560] to-[#0F3460] hover:bg-gradient-to-br   px-5 py-2 rounded-lg ">
             <div className=" py-5">
