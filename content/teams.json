@@ -1,0 +1,276 @@
+[{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc9997"
+  },
+  "id": "GDSCL001",
+  "name": "Abhishek Kushwaha",
+  "role": "Lead",
+  "linkedin": "https://www.linkedin.com/in/abbhiishek/",
+  "github": "Abhishek kushwaha Abbhiishek",
+  "tagline": "\"Code Community Music\"",
+  "image": "https://avatars.githubusercontent.com/u/86338762?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc9998"
+  },
+  "id": "GDSCH002",
+  "name": "Saptarshi Bandopadhyay",
+  "role": "Community Head",
+  "linkedin": "https://www.linkedin.com/in/saptarshi-bandopadhyay-4b4113214/",
+  "github": "https://github.com/Saptarshi-Bandopadhyay",
+  "tagline": "",
+  "image": "https://avatars.githubusercontent.com/u/88289395?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc9999"
+  },
+  "id": "GDSCH003",
+  "name": "Chandan Pandey",
+  "role": "Technical Head",
+  "linkedin": "https://www.linkedin.com/in/chandanp007/",
+  "github": "https://github.com/ChandanP007",
+  "tagline": "\"That DevOps Guy\"",
+  "image": "https://avatars.githubusercontent.com/u/95927947?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999a"
+  },
+  "id": "GDSCH004",
+  "name": "Debojeet Karmakar",
+  "role": "Management Head",
+  "linkedin": "https://www.linkedin.com/in/debojeet-karmakar-852820210/",
+  "github": "https://github.com/code-life99",
+  "tagline": "\"Expect the Unexpected\"",
+  "image": "https://avatars.githubusercontent.com/u/92775449?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999b"
+  },
+  "id": "GDSCH005",
+  "name": "Mayank Sah",
+  "role": "Socials Head",
+  "linkedin": "https://www.linkedin.com/in/mayank-sah-4239701b3",
+  "github": "https://github.com/Mayanksah777",
+  "tagline": "\"The game is all about staying in the crease and not giving up\"",
+  "image": "https://avatars.githubusercontent.com/u/74108758?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999c"
+  },
+  "id": "GDSCH006",
+  "name": "Aditya Dhanraj Kundu",
+  "role": "Creative Head",
+  "linkedin": "https://www.linkedin.com/in/aditya-dhanaraj-kundu-476485222",
+  "github": "https://github.com/AdityaDhanarajKundu",
+  "tagline": "Focus on Finite Learning",
+  "image": "https://avatars.githubusercontent.com/u/92218805?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999d"
+  },
+  "id": "GDSCC007",
+  "name": "Aneesh Bose",
+  "role": "Event Coordinator",
+  "linkedin": "https://www.linkedin.com/in/aneesh-bose-758628241",
+  "github": "https://github.com/aneesh-Bose",
+  "tagline": "\"Think deeply about simple things\"",
+  "image": "https://avatars.githubusercontent.com/u/111268136?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999e"
+  },
+  "id": "GDSCC008",
+  "name": "Anjali Gupta",
+  "role": "Event Coordinator",
+  "linkedin": "https://www.linkedin.com/in/anjali-gupta-2774a1222",
+  "github": "https://github.com/anjalig18",
+  "tagline": "\"Simplicity is the soul of efficiency\"",
+  "image": "https://avatars.githubusercontent.com/u/92169945?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc999f"
+  },
+  "id": "GDSCR009",
+  "name": "Deblina Pal",
+  "role": "Event Representative",
+  "linkedin": "https://www.linkedin.com/in/deblina-pal-783985222",
+  "github": "https://github.com/deblinapal",
+  "tagline": "The journey of thousand miles begins with a single step",
+  "image": "https://avatars.githubusercontent.com/u/92203327?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a0"
+  },
+  "id": "GDSCR010",
+  "name": "Debanjan Pan",
+  "role": "Event Representative",
+  "linkedin": "",
+  "github": "",
+  "tagline": "",
+  "image": ""
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a1"
+  },
+  "id": "GDSCR011",
+  "name": "Rupam Das",
+  "role": "Event Representative",
+  "linkedin": "https://www.linkedin.com/in/rupamd-developer/",
+  "github": "",
+  "tagline": "\"{alive ?  code : ded }\"",
+  "image": "https://pbs.twimg.com/profile_images/1555273745258156032/3ktGJnmP_400x400.jpg"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a2"
+  },
+  "id": "GDSCS012",
+  "name": "Abhisan Paul",
+  "role": "Creative Team",
+  "linkedin": "https://www.linkedin.com/in/abhisan-paul-247986224",
+  "github": "https://github.com/AbhisanPaul",
+  "tagline": "",
+  "image": "https://avatars.githubusercontent.com/u/112410204?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a3"
+  },
+  "id": "GDSCS013",
+  "name": "Pulak Tarafder",
+  "role": "Creative Team",
+  "linkedin": "https://www.linkedin.com/in/pulak-tarafder-987483222",
+  "github": "https://github.com/pulaktarafder",
+  "tagline": "\"A flower blooms only to be crushed\"",
+  "image": "https://avatars.githubusercontent.com/u/92203184?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a4"
+  },
+  "id": "GDSCS014",
+  "name": "Roshmikana Pal",
+  "role": "Creative Team",
+  "linkedin": "https://www.linkedin.com/in/roshmikana-pal-63266222a",
+  "github": "https://github.com/Roshmikana",
+  "tagline": "\"villain= the ones who are abused for their stories untold\"",
+  "image": "https://avatars.githubusercontent.com/u/103313992?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a5"
+  },
+  "id": "GDSCS015",
+  "name": "Trijeta Ghosh",
+  "role": "Creative Team",
+  "linkedin": "https://www.linkedin.com/in/trijeta-ghosh-0a1987222",
+  "github": "https://github.com/TrijetaGhosh166",
+  "tagline": "\"Singing,drawing,coding\"",
+  "image": "https://avatars.githubusercontent.com/u/110444654?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a6"
+  },
+  "id": "GDSCS016",
+  "name": "Shreyos Ghosh",
+  "role": "Creative Team",
+  "linkedin": "https://www.linkedin.com/in/shreyos-ghosh-3a0841209",
+  "github": "https://github.com/Shreyosgit",
+  "tagline": "\"Eat sleep code repeat\"",
+  "image": "https://avatars.githubusercontent.com/u/92203452?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a7"
+  },
+  "id": "GDSCS017",
+  "name": "Nabanita Sarkar",
+  "role": "Event Staff",
+  "linkedin": "https://www.linkedin.com/in/nabanita--sarkar",
+  "github": "",
+  "tagline": "\"Life is all about breaking and making\"",
+  "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEGX7IRKSRTqQ/profile-displayphoto-shrink_400_400/0/1660734537571?e=1669248000&v=beta&t=pwCoBiO4imitPHuVbpe_anl9mP1v1dObJuhE7av21AE"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a8"
+  },
+  "id": "GDSCS018",
+  "name": "Rakesh Kumar",
+  "role": "Event Staff",
+  "linkedin": "www.linkedin.com/in/rakesh-kumar-19237a224",
+  "github": "https://github.com/rk-1620",
+  "tagline": "\"Never trust your code before testing\"",
+  "image": "https://avatars.githubusercontent.com/u/109271418?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99a9"
+  },
+  "id": "GDSCS019",
+  "name": "Sahil Raj",
+  "role": "Event Staff",
+  "linkedin": "https://www.linkedin.com/in/sahil-raj-aa64a0222",
+  "github": "https://github.com/Issiehyodo",
+  "tagline": "\"Consistency is the key to success and I like being consistent.\"",
+  "image": "https://avatars.githubusercontent.com/u/92203318?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99aa"
+  },
+  "id": "GDSCS020",
+  "name": "Aman Kumar Singh",
+  "role": "Event Staff",
+  "linkedin": "https://www.linkedin.com/in/aman-kumar-singh-17839024a",
+  "github": "https://github.com/Aman-00Singh",
+  "tagline": "\"Work in Silence\"",
+  "image": "https://avatars.githubusercontent.com/u/112414921?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99ab"
+  },
+  "id": "GDSCS021",
+  "name": "Anapeksha Das",
+  "role": "Event Staff",
+  "linkedin": "https://www.linkedin.com/in/anapeksha-das-b90525222",
+  "github": "https://github.com/Battleboy-bot",
+  "tagline": "",
+  "image": "https://avatars.githubusercontent.com/u/82570454?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99ac"
+  },
+  "id": "GDSCS022",
+  "name": "Arpan Chall",
+  "role": "Event Staff",
+  "linkedin": " https://www.linkedin.com/in/arpan-chall-a4977b1b2",
+  "github": "",
+  "tagline": "\"Observation is the key\"",
+  "image": "https://media-exp1.licdn.com/dms/image/C5603AQHlKb3TZWYdEg/profile-displayphoto-shrink_400_400/0/1661500646896?e=1669248000&v=beta&t=0BN9JyIZngN2jPgKjPsd-8sdkF9GYhzivruhQozQl38"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99ad"
+  },
+  "id": "GDSCS023",
+  "name": "Akash Barman",
+  "role": "Technical Team",
+  "linkedin": "https://www.linkedin.com/in/akashbarman",
+  "github": "https://github.com/itstheakash",
+  "tagline": "",
+  "image": "https://avatars.githubusercontent.com/u/92024930?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99ae"
+  },
+  "id": "GDSCS024",
+  "name": "Anal Rauth",
+  "role": "Event Staff",
+  "linkedin": "https://www.linkedin.com/in/anal-rauth-748615186",
+  "github": "https://github.com/Anal-Rauth",
+  "tagline": "\"Keep coding, keep learning.\"",
+  "image": "https://avatars.githubusercontent.com/u/92204755?v=4"
+},{
+  "_id": {
+    "$oid": "6386fc162ff5d45d18cc99af"
+  },
+  "id": "GDSCS025",
+  "name": "Anumita Nandi",
+  "role": "Event Staff",
+  "linkedin": "",
+  "github": "",
+  "tagline": "",
+  "image": ""
+}]
