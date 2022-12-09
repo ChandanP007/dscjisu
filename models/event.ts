@@ -1,20 +1,61 @@
 import { model, models, Schema } from 'mongoose';
 
 
-interface IEvent {
-    id: string;
-    name: string;
-    description: string;
-    date: string;
-    type: string;
-    slug: string;
-    eventpic: string;
-    eventbanner: string;
-    eventLink: string;
-    isActive: boolean;
-    isCompleted: boolean;
-    locationName: string;
-    locationUrl: string;
+export interface IEvent {
+    id: {
+        type: string;
+        required: true;
+        unique: true;
+    };
+    name: {
+        type: string;
+        required: true;
+    };
+    description: {
+        type: string;
+        required: true;
+    };
+    date: {
+        type: string;
+        required: true;
+    };
+    type: {
+        type: string;
+        required: true;
+    };
+    slug: {
+        type: string;
+        required: true;
+        unique: true;
+    };
+    eventpic: {
+        type: string;
+        required: true;
+    };
+    eventbanner: {
+        type: string;
+        required: true;
+    };
+    eventLink: {
+        type: string;
+        required: true;
+    };
+    isActive: {
+        type: boolean;
+        required: true;
+    };
+    isCompleted: {
+        type: boolean;
+        required: true;
+    };
+    locationName: {
+        type: string;
+        required: true;
+    };
+    locationUrl: {
+        type: string;
+        required: true;
+    };
 }
 
 const EventSchema = new Schema<IEvent>({

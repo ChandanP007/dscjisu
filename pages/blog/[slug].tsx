@@ -82,7 +82,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                     headings: "h1, h2, h3, h4, h5, h6",
                     tight: true,
                     className: "toc",
-                    slug: (text) => text.toLowerCase().replace(/\s/g, "-"),
+                    slug: (text: String) => text.toLowerCase().replace(/\s/g, "-"),
 
                 }],
             ],

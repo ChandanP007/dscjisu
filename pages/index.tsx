@@ -28,14 +28,14 @@ export async function getStaticProps() {
   //   return (b.id) - (a.id);
   // });
 
-  const res = await fetch('http://localhost:3000/api/event', {
+  const res = await fetch(`${process.env.API_URL!}/api/event`, {
     method: 'GET',
   });
   const EventData = await res.json();
   // console.log(EventData);
 
 
-  const members = await fetch('http://localhost:3000/api/team', {
+  const members = await fetch(`${process.env.API_URL!}/api/team`, {
     method: 'GET',
   });
   const TeamData = await members.json();

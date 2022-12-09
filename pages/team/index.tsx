@@ -15,11 +15,14 @@ interface TeamMeta {
 }
 
 export async function getStaticProps() {
-    const members = await fetch('http://localhost:3000/api/team', {
+    const members = await fetch(`${process.env.API_URL}/api/team`, {
         method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
     });
     const TeamData = await members.json();
-    console.log(TeamData);
+    // console.log(TeamData);
 
 
     return { props: { teams: TeamData } };

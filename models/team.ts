@@ -1,6 +1,6 @@
 import { model, models, Schema } from 'mongoose';
 
-interface ITeam {
+export interface ITeam {
     id: string;
     name: string;
     role: string;
