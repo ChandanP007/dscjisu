@@ -23,8 +23,6 @@ export async function getStaticProps() {
     });
     const TeamData = await members.json();
     // console.log(TeamData);
-
-
     return { props: { teams: TeamData } };
 }
 

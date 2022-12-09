@@ -1,57 +1,44 @@
-// import SpeedDail from '../components/speedDail';
 import Head from 'next/head';
 import CommunityData from '../content/community.json';
-// import EventData from '../content/events.json';
-import Chapter from '../layout/Chapter';
-import Community from '../layout/Community';
-import Events from '../layout/Events';
-import Header from '../layout/Header';
-// import Landing from '../layout/Landing';
 import Agenda from '../layout/agenda';
 import Blog from '../layout/blog';
+import Chapter from '../layout/Chapter';
+import Community from '../layout/Community';
 import Connect from '../layout/Connect';
+import Events from '../layout/Events';
 import Gallery from '../layout/gallery';
+import Header from '../layout/Header';
 import Team from '../layout/Team';
 
 
 
 
 export async function getStaticProps() {
-  // const team_data = await fetch("http://localhost:3000/api/team");
-  // const event_data = await fetch("http://localhost:3000/api/event");
-  // const community_data = await fetch("http://localhost:3000/api/community");
-  // const Team = await team_data.json()
-  // const Event = await event_data.json()
-  // const Community = await community_data.json()
-  // sort the event by date
-  // const sortedEvent = Event.sort((a, b) => {
-  //   return (b.id) - (a.id);
-  // });
 
-  const res = await fetch(`${process.env.API_URL!}/api/event`, {
+  const res = await fetch(`${process.env.API_URL}/api/event`, {
     method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
   });
   const EventData = await res.json();
-  // console.log(EventData);
-
-
-  const members = await fetch(`${process.env.API_URL!}/api/team`, {
+  const members = await fetch(`${process.env.API_URL}/api/team`, {
     method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
   });
   const TeamData = await members.json();
-  // const Event = EventData;
   const Community = CommunityData;
 
 
   return {
+    // will be passed to the page component as props
     props: {
       team: TeamData,
-      // event: EventData.sort(
-      //   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      // ),
       event: EventData.filter((event: any) => event.isCompleted === false),
       community: Community
-    }, // will be passed to the page component as props
+    },
   }
 }
 
@@ -81,7 +68,6 @@ const Home = ({ team, event, community }: any) => {
       </Head>
 
       <main>
-        {/* <Landing /> */}
         <Header />
         <Agenda />
         <Events events={event} />
@@ -91,7 +77,6 @@ const Home = ({ team, event, community }: any) => {
         <Community community={community} />
         <Chapter />
         <Gallery />
-        {/* <SpeedDail /> */}
       </main>
     </>
   );
