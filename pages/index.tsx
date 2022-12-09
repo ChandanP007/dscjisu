@@ -13,7 +13,9 @@ import Team from '../layout/Team';
 
 
 
-export async function getStaticProps() {
+
+export async function getServerSideProps() {
+
 
   const res = await fetch(`${process.env.API_URL}/api/event`, {
     method: 'GET',
@@ -29,6 +31,9 @@ export async function getStaticProps() {
     }
   });
   const TeamData = await members.json();
+
+
+
   const Community = CommunityData;
 
 

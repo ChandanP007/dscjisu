@@ -1,6 +1,7 @@
 import Head from "next/head";
 import TeamCard from "../../components/cards/team/TeamCard";
 
+
 interface TeamMeta {
 
     id: string;
@@ -14,15 +15,28 @@ interface TeamMeta {
 
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const members = await fetch(`${process.env.API_URL}/api/team`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
     });
-    const TeamData = await members.json();
-    // console.log(TeamData);
+    // await connectMongo();
+    // const members: TeamMeta[] = await TeamSchema.find({});
+    // const TeamData = await members.map((member) => ({
+    //     id: member.id,
+    //     name: member.name,
+    //     role: member.role,
+    //     linkedin: member.linkedin,
+    //     github: member.github,
+    //     twitter: member.twitter,
+    //     tagline: member.tagline,
+    //     image: member.image,
+    // }))
+    const TeamData = await members.json()
+        ;
+    console.log(TeamData);
     return { props: { teams: TeamData } };
 }
 
