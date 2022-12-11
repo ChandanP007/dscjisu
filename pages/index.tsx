@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import CommunityData from '../content/community.json';
+import EventData from '../content/events.json';
+import TeamData from '../content/teams.json';
 import Agenda from '../layout/agenda';
 import Blog from '../layout/blog';
 import Chapter from '../layout/Chapter';
@@ -17,26 +19,22 @@ import Team from '../layout/Team';
 export async function getServerSideProps() {
 
 
-  const res = await fetch(`${process.env.API_URL}/api/event`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-  const EventData = await res.json();
-  const members = await fetch(`${process.env.API_URL}/api/team`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-  const TeamData = await members.json();
-
-
+  // const res = await fetch(`${process.env.API_URL}/api/event`, {
+  //   method: 'GET',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   }
+  // });
+  // const EventData = await res.json();
+  // const members = await fetch(`${process.env.API_URL}/api/team`, {
+  //   method: 'GET',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   }
+  // });
+  // const TeamData = await members.json();
 
   const Community = CommunityData;
-
-
   return {
     // will be passed to the page component as props
     props: {
