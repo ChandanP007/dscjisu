@@ -34,7 +34,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, dat
               </div>
               <div className={styles.card__body}>
                 <span className={`${styles.tag} ${styles['tag-blue']}`}>{tag}</span>
-                <h4>{title}</h4>
+                <h4>{title.slice(0, 50)} ...</h4>
                 <p>{body.slice(0, 100)}...</p>
               </div>
               <div className={styles.card__footer}>
