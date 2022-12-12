@@ -16,7 +16,7 @@ import Team from '../layout/Team';
 
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
 
   // const res = await fetch(`${process.env.API_URL}/api/event`, {
