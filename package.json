@@ -22,9 +22,11 @@
         "build-storybook": "build-storybook"
     },
     "dependencies": {
+        "@auth0/nextjs-auth0": "^2.0.1",
         "@emotion/react": "^11.10.4",
         "@emotion/styled": "^11.10.4",
         "@mui/icons-material": "^5.10.9",
+        "@mui/lab": "^5.0.0-alpha.112",
         "@mui/material": "^5.10.11",
         "@tanem/react-nprogress": "^5.0.19",
         "@types/mongodb": "^4.0.7",
