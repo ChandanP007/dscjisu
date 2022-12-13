@@ -141,7 +141,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                             </div>
                             <div className="p-2 rounded-md sticky bottom-5 bg-slate-900">
                                 <div className="flex  gap-1 rounded text-white justify-center">
-                                    <div className="lg:basis-0 basis-1/3 flex justify-center content-center text-center bg-blue-500 hover:bg-blue-800 rounded-md">
+                                    <div className="lg:basis-0  flex justify-center content-center text-center bg-blue-500 hover:bg-blue-800 rounded-md">
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
@@ -161,7 +161,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1> {like} 👍</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="basis-1/3 bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
@@ -182,7 +182,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             {/* <h1> {like} 👍</h1> */}
                                         </LoadingButton>
                                     </div>
-                                    <div className="basis-1/3 bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
@@ -202,7 +202,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1>{unicorn} 🦄</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="basis-1/3 bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
 
                                         <LoadingButton
                                             size="small"
@@ -223,7 +223,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1>{wow} 😲</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="basis-1/3 bg-yellow-400 hover:bg-yellow-600 rounded flex justify-center content-center text-center">
+                                    <div className=" bg-yellow-400 hover:bg-yellow-600 rounded flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
@@ -243,7 +243,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1>{upvote} ⬆️</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="basis-1/3 bg-green-400 hover:bg-green-800 rounded flex justify-center content-center text-center">
+                                    <div className=" bg-green-400 hover:bg-green-800 rounded flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
                                             title="Share the Post"
