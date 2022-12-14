@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
+import rehypePrism from 'rehype-prism-plus';
+
 import rehypeSlug from "rehype-slug";
 import toc from "rehype-toc";
 import remarkGfm from "remark-gfm";
@@ -88,7 +90,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
         }
 
         GetPost()
-    }, []);
+    }, [slug]);
 
 
 
@@ -153,7 +155,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     // ReactionIncrement()
                                                     // UpdateReaction(love, post.meta.slug)
                                                     setloading(true)
-                                                    UpdateReaction(love, like, unicorn, wow, upvote, slug)
+                                                    UpdateReaction(love, like + 1, unicorn, wow, upvote, slug)
                                                 }
                                             }
                                             loading={loading}
@@ -173,7 +175,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     // ReactionIncrement()
                                                     // UpdateReaction(love, post.meta.slug)
                                                     setloading(true)
-                                                    UpdateReaction(love, like, unicorn, wow, upvote, slug)
+                                                    UpdateReaction(love + 1, like, unicorn, wow, upvote, slug)
                                                 }
                                             }
                                             loading={loading}
@@ -187,13 +189,13 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                     <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
-                                            title="Love the Post"
+                                            title="Unicorn the Post"
                                             onClick={
-                                                () => {
-                                                    setunicorn(unicorn + 1)
+                                                async () => {
+                                                    await setunicorn(unicorn + 1)
                                                     // UpdateReaction(unicorn, slug)
                                                     setloading(true)
-                                                    UpdateReaction(love, like, unicorn, wow, upvote, slug)
+                                                    await UpdateReaction(love, like, unicorn + 1, wow, upvote, slug)
                                                 }
                                             }
                                             loading={loading}
@@ -214,7 +216,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     setwow(wow + 1)
                                                     // UpdateReaction(wow, slug)
                                                     setloading(true)
-                                                    UpdateReaction(love, like, unicorn, wow, upvote, slug)
+                                                    UpdateReaction(love, like, unicorn, wow + 1, upvote, slug)
                                                 }
                                             }
                                             loading={loading}
@@ -228,13 +230,13 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                     <div className=" bg-yellow-400 hover:bg-yellow-600 rounded flex justify-center content-center text-center">
                                         <LoadingButton
                                             size="small"
-                                            title="Love the Post"
+                                            title="Upvote the Post"
                                             onClick={
                                                 () => {
                                                     setupvote(upvote + 1)
                                                     // UpdateReaction(unicorn, slug)
                                                     setloading(true)
-                                                    UpdateReaction(love, like, unicorn, wow, upvote, slug)
+                                                    UpdateReaction(love, like, unicorn, wow, upvote + 1, slug)
                                                 }
                                             }
                                             loading={loading}
@@ -281,6 +283,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 rehypeSlug,
                 [rehypeAutolinkHeadings, { behavior: "wrap" }],
                 rehypeHighlight,
+                rehypePrism,
                 [toc, {
                     headings: "h1, h2, h3, h4, h5, h6",
                     tight: true,
