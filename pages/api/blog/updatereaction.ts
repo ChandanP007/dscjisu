@@ -1,13 +1,13 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 import connectMongo from "../../../lib/ConnectDb";
-import BlogSchema, { IBlog } from "../../../models/blog";
+import BlogSchema from "../../../models/blog";
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    await connectMongo();
     const { slug, like, love, unicorn, wow, upvote } = req.body;
     try {
+        await connectMongo();
         const blog = await BlogSchema.findOneAndUpdate(
             {
                 slug,
@@ -20,16 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     wow,
                     upvote,
                 },
-            },
-            (err: any, doc: IBlog) => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    res.status(200).json(doc);
-                    // console.log(doc)
-                }
-            }
-        ).clone();
+            }).clone();
+        res.send({ blog })
     } catch (error) {
         res.status(500).json({
             message: "Internal Server Error",
