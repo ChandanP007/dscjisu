@@ -19,7 +19,7 @@ The first step in building a GraphQL API is to define the data schema. This invo
 
 In GraphQL, the schema is written using the GraphQL Schema Definition Language (SDL), which is a human-readable syntax for defining the types and relationships in the schema. Here is an example of how you might define the Task and User types in the to-do list application:
 
-```js
+```js showLineNumbers
 type User {
   id: ID!
   name: String!
@@ -44,7 +44,7 @@ Once you have defined your data schema, you will need to implement resolvers for
 
 In GraphQL, resolvers are typically organized into a "resolver map" where each key in the map corresponds to a field in the schema. For example, here is how you might implement the resolvers for the Task type in the to-do list application:
 
-```js
+```js showLineNumbers
 const resolvers = {
   Task: {
     id: (parent, args, context) => parent.id,
@@ -67,7 +67,7 @@ The next step is to create the GraphQL server, which will allow us to send queri
 
 In this example, we will use Apollo Server, which is a popular GraphQL server implementation that supports many of the most commonly used GraphQL features. To create the server, we first need to define the schema and resolvers that we have implemented in the previous steps:
 
-```js
+```js showLineNumbers
 const schema = makeExecutableSchema({
   typeDefs: [UserType, TaskType],
   resolvers,
@@ -123,7 +123,7 @@ Once you have set up the GraphQL server, you can test the API by sending GraphQL
 
 To send queries and mutations to the server, you can use a GraphQL client such as GraphiQL or Insomnia. These tools allow you to construct and send GraphQL queries and mutations and view the results in an easy-to-read format. For example, here is how you might query the API to fetch all the tasks for a particular user:
 
-```js
+```js showLineNumbers
 query {
   user(id: "1") {
     name
@@ -141,7 +141,7 @@ query {
 
 In this example, the query specifies that we want to fetch the name, email, and tasks fields for the user with the id of 1. The API will then use the user resolver to fetch the user with the specified id, and the tasks resolver to fetch the tasks for that user. The resulting data will be returned in the following format:
 
-```js
+```js showLineNumbers
 
 {
   "data": {
@@ -171,7 +171,7 @@ In this example, the query specifies that we want to fetch the name, email, and 
 
 In addition to querying the API, you can also use GraphQL mutations to modify the data in the API. For example, here is how you might use a mutation to update the completed field for a particular task:
 
-```js
+```js showLineNumbers
 mutation {
   updateTask(id: "1", completed: true) {
     id
@@ -184,7 +184,7 @@ mutation {
 
 In this example, the mutation specifies that we want to update the task with the id of 1, setting the completed field to true. The API will then use the appropriate resolver to update the task and return the updated data in the following format:
 
-```js
+```js {1,2,3,4,5,6,7,8,9,10} showLineNumbers
 {
   "data": {
     "updateTask": {
