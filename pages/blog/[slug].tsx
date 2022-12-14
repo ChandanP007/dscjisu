@@ -52,8 +52,6 @@ export default function PostPage({ post }: { post: MDXPost }) {
             (data) => {
                 console.log(data);
                 setloading(false);
-                // reload the window
-                // window.location.reload();
             }
         )
 
@@ -102,6 +100,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 <meta name="og:title" content={post.meta.title} />
                 <meta name="og:description" content={post.meta.body} />
                 <meta name="og:image" content={`https://dscjisu.vercel.app` + post.meta.blogImage} />
+                <meta name="twitter:creator" content="@dscjisu" />
+                <meta name="twitter:title" content="Google Developer Student Clubs JIS University Kolkata" />
+                <meta name="twitter:description" content="Connect - Learn - Grow" />
+                <meta name="twitter:image" content={`https://dscjisu.vercel.app` + post.meta.blogImage} />
             </Head>
             <main className="bg-black">
                 <div className="py-20 mx-auto lg:max-w-[65%] xs:max-w-[75%]">
@@ -249,10 +251,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             title="Share the Post"
                                             onClick={
                                                 () => {
-                                                    window.open(`https://twitter.com/intent/tweet?text=Check Out this article on \n "${post.meta.title}" posted by @dscjisu &hashtags=dscjisu,dev,developer,${post.meta.tags}\n &url=https://dscjisu.vercel.app/blog/${post.meta.slug}`, "_blank")
+                                                    window.open(`https://twitter.com/intent/tweet?text=Check Out this article on \n "${post.meta.title}" posted by @dscjisu &hashtags=dscjisu,dev,developer,${post.meta.tags} \n\n\n\n\n &url=https://dscjisu.vercel.app/blog/${post.meta.slug}`, "_blank")
                                                 }
                                             }
-                                            loading={loading}
+                                            // loading={loading}
                                             loadingIndicator="sharing"
                                             className="text-white"
                                         // variant="outlined"
