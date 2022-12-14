@@ -1,6 +1,17 @@
 version: '3'
 services:
   web:
+    image: docker-nextjs-dev
     build: .
     ports:
-      - '3000:3000'
+      - 3000:3000
+    volumes:
+      - ./pages:/app/pages
+      - ./components:/app/components
+      - ./layout:/app/layout
+      - ./lib:/app/lib
+      - ./content:/app/content
+      - ./blogs:app/blogs
+      - ./events:app/events
+      - ./public:app/public
+      - ./models:app/models
