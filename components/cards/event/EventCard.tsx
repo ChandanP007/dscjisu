@@ -19,7 +19,7 @@ export interface IEventCard {
 const EventCard: React.FC<IEventCard> = ({ description, eventpic, name, date, locationUrl, eventLink, id, isCompleted, isActive, type, locationName, slug }) => {
   return (
     <Link href={`/event/${slug}`} passHref>
-      <div className="lg:mx-2   w-full h-full lg:p-0 xs:p-8" title={description}>
+      <div className="lg:mx-2  h-full lg:p-0 xs:p-8" title={description}>
         <div className='flex  flex-col lg:flex-row bg-white  h-full w-full rounded-xl shadow-lg dark:shadow-slate-300 dark:shadow-md' key={id}>
           <div className='lg:rounded-lg rounded-full mx-auto  my-auto p-5'>
             <Image src={eventpic} className="lg:rounded-lg rounded-full " width={144} height={144} alt={name} />

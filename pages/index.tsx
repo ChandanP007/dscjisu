@@ -13,6 +13,8 @@ import Header from '../layout/Header';
 import Team from '../layout/Team';
 
 
+
+
 export async function getStaticProps() {
 
   const Community = CommunityData;

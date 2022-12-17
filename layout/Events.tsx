@@ -24,9 +24,9 @@ interface EventsProps {
 function Events({ events: events }: EventsProps) {
     return (
         <>
-            <div className="bg-slate-800  text-center pt-20">
+            <div className="bg-slate-800  text-center pt-2">
                 <div className="conatiner mx-auto lg:mx-24">
-                    <h1 className='lg:text-6xl text-4xl text-white font-mono'>Upcoming Events</h1>
+                    <h1 className='lg:text-5xl text-4xl text-white font-mono'>Upcoming Events</h1>
                     {
                         events?.length === 0 && (
                             <p className='text-white font-light font-mono pt-5 text-base px-5 text-clip'>
@@ -35,7 +35,7 @@ function Events({ events: events }: EventsProps) {
                         )
                     }
                     <div className="">
-                        <div className="grid grid-cols-2 gap-4 p-10 justify-center items-center">
+                        <div className={`grid  ${events.length >= 3 ? "grid-cols-3" : `${events.length == 2 ? "grid-cols-2" : "grid-cols-1"}`} gap-4 p-10 justify-items-center items-center content-center`}>
                             {
                                 events?.map((item: EventProps) => {
                                     return (
@@ -61,9 +61,9 @@ function Events({ events: events }: EventsProps) {
 
                     </div>
 
-                    <div className="p-5">
+                    <div className="p-5 events-btn">
                         <Link href="/event" passHref>
-                            <button className="bg-yellow-400 p-5 rounded-lg">
+                            <button className="bg-yellow-400 p-5 rounded-lg ">
                                 <h1 className=' text-black font-mono'>View Past Events</h1>
                             </button>
                         </Link>

@@ -8,8 +8,6 @@ function MyApp({ Component, pageProps }: any) {
   // Use the layout defined at the page level, if available
   // const getLayout = Component.getLayout || ((page) => page);
 
-
-
   return (
     <>
       <Head>
@@ -42,7 +40,6 @@ function MyApp({ Component, pageProps }: any) {
         height={3}
         options={{ easing: 'ease', speed: 500 }}
       />
-
       <Component {...pageProps} />
       <Footer />
     </>

@@ -136,19 +136,21 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="">
-                            <div className=" pb-10">
+                        <div className="lg:grid grid-cols-6 gap-1">
+                            <div className="col-span-5 pb-10">
                                 <article>
                                     <h1>Table of Content</h1>
                                     <MDXRemote {...post.source} components={{ YouTube, Image }} />
                                 </article>
                             </div>
-                            <div className="p-2 rounded-md sticky bottom-5 bg-slate-900">
-                                <div className="flex  gap-1 rounded text-white justify-center">
-                                    <div className="lg:basis-0  flex justify-center content-center text-center bg-blue-500 hover:bg-blue-800 rounded-md">
+                            <div className="grid-col-1 p-2 rounded-md sticky bottom-5 bg-slate-900 lg:bg-black">
+                                <div className="lg:flex grid grid-cols-3 gap-3 lg:flex-col lg:gap-5  sticky lg:top-56 bottom-0 text-white justify-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center rounded"
+                                    >
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
+                                            loading={loading}
                                             onClick={
                                                 () => {
                                                     setlike(like + 1)
@@ -158,14 +160,14 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     UpdateReaction(love, like + 1, unicorn, wow, upvote, slug)
                                                 }
                                             }
-                                            loading={loading}
-                                            className="text-white p-0"
+                                            className="text-white rounded-full  bg-blue-500 hover:bg-blue-800"
                                         // variant="outlined"
                                         >
                                             <h1> {like} 👍</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    >
                                         <LoadingButton
                                             size="small"
                                             title="Love the Post"
@@ -179,14 +181,15 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                 }
                                             }
                                             loading={loading}
-                                            className="text-white"
+                                            className="text-white bg-red-400   hover:bg-red-800 rounded-full"
                                         // variant="outlined"
                                         >
                                             <h1>{love} ❤️</h1>
                                             {/* <h1> {like} 👍</h1> */}
                                         </LoadingButton>
                                     </div>
-                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    >
                                         <LoadingButton
                                             size="small"
                                             title="Unicorn the Post"
@@ -198,19 +201,22 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     await UpdateReaction(love, like, unicorn + 1, wow, upvote, slug)
                                                 }
                                             }
+
                                             loading={loading}
-                                            className="text-white"
+                                            className="text-white bg-violet-400   hover:bg-violet-800 rounded-full"
 
                                         // variant="outlined"
                                         >
                                             <h1>{unicorn} 🦄</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className=" bg-red-400 rounded  hover:bg-red-800 flex justify-center content-center text-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    >
 
                                         <LoadingButton
                                             size="small"
                                             title="Wow the Post"
+
                                             onClick={
                                                 () => {
                                                     setwow(wow + 1)
@@ -221,13 +227,14 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             }
                                             loading={loading}
                                             // loadingIndicator="Loading…"
-                                            className="text-white"
+                                            className="text-white bg-red-400  hover:bg-red-800 rounded-full"
                                         // variant="outlined"
                                         >
                                             <h1>{wow} 😲</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className=" bg-yellow-400 hover:bg-yellow-600 rounded flex justify-center content-center text-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    >
                                         <LoadingButton
                                             size="small"
                                             title="Upvote the Post"
@@ -239,26 +246,34 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     UpdateReaction(love, like, unicorn, wow, upvote + 1, slug)
                                                 }
                                             }
+
                                             loading={loading}
                                             // loadingIndicator="Loading…"
-                                            className="text-white"
+                                            className="text-white bg-emerald-500 hover:bg-emerald-600 rounded-full"
                                         // variant="outlined"
                                         >
                                             <h1>{upvote} ⬆️</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className=" bg-green-400 hover:bg-green-800 rounded flex justify-center content-center text-center">
+                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    >
                                         <LoadingButton
                                             size="small"
                                             title="Share the Post"
+
                                             onClick={
                                                 () => {
-                                                    window.open(`https://twitter.com/intent/tweet?text=Check Out this article on \n "${post.meta.title}" posted by @dscjisu &hashtags=dscjisu,dev,developer,${post.meta.tags} \n\n\n\n\n &url=https://dscjisu.vercel.app/blog/${post.meta.slug}`, "_blank")
+                                                    window.open(`https://twitter.com/intent/tweet?text=Thank%20you%20 @dscjisu for publishing%20this%20helpful%20article.
+                                                    ${post.meta.title}
+                                                    &url=https://dscjisu.vercel.app/blog/${post.meta.slug}`, "_blank")
+
+                                                    // window.open(`https://twitter.com/intent/tweet?text=Check Out this article on \n "${post.meta.title}" posted by @dscjisu &hashtags=dscjisu,dev,developer,${post.meta.tags} \n\n\n\n\n &url=https://dscjisu.vercel.app/blog/${post.meta.slug}`, "_blank")
+
                                                 }
                                             }
                                             // loading={loading}
                                             loadingIndicator="sharing"
-                                            className="text-white"
+                                            className="text-white bg-rose-700 hover:bg-rose-800 rounded-full"
                                         // variant="outlined"
                                         >
                                             <h1>Share</h1>

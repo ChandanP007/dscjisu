@@ -1,190 +1,215 @@
 [{
-  "_id": {
-    "$oid": "637dafd6cfdcdc9bbd4dc14b"
-  },
-  "id": "11",
-  "name": "A Guide to Cybersecurity & Cyberspace",
-  "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview or in learning about the software development roadmap.",
-  "date": "2022/11/05",
-  "type": "Speaker Session",
-  "slug": "a-guide-to-cybersecurity-cyberspace",
-  "eventpic": "/events/a-guide-to-cybersecurity-cyberspace/a-guide-to-cybersecurity-cyberspace.jpg",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-a-guide-to-cybersecurity-cyberspace/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-a-guide-to-cybersecurity-cyberspace/"
-},{
-  "_id": {
-    "$oid": "637dcb8cff134ec75e8135be"
-  },
-  "id": "563646",
-  "name": "Compose Camp Day 01",
-  "description": "Learn how to build Android apps! Join us for ComposeCamp on September 9 , 2022.",
-  "eventpic": "/events/compose-camp/compose-camp.png",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-01/",
-  "date": "2022/09/09",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-01/",
-  "isCompleted": true,
-  "isActive": false,
-  "type": "Compose Camp",
-  "locationName": "Online",
-  "slug": "compose-camp-day-01",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f2510376d77626a4e8a2"
-  },
-  "id": "563647",
-  "name": "Compose Camp Day 02 | Basic Layout",
-  "description": "Learn how to build Android apps! Join us for ComposeCamp on September 17 , 2022.",
-  "eventpic": "/events/compose-camp/compose-camp.png",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-02-basic-layout/",
-  "date": "2022/09/17",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-02-basic-layout/",
-  "isCompleted": true,
-  "isActive": false,
-  "type": "Compose Camp",
-  "locationName": "Online",
-  "slug": "compose-camp-day-02",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f32f2b9e1643fcc08a11"
-  },
-  "id": "CF0HYGxCm2pkVPepcnJVb",
-  "name": "Compose Camp Day 03 | Basic Layout",
-  "description": "Learn how to build Android apps! Join us for ComposeCamp on September 18 , 2022.",
-  "date": "2022/09/18",
-  "type": "Compose Camp",
-  "slug": "compose-camp-day-03",
-  "eventpic": "/events/compose-camp/compose-camp.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-03-kotlin-fundamentals/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-03-kotlin-fundamentals/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f3a42b9e1643fcc08a13"
-  },
-  "id": "P_R828zVe8_GKXuKchxEg",
-  "name": "Compose Camp Day 04 | Add a button to an app",
-  "description": "Learn how to build Android apps! Join us for ComposeCamp on September 24 , 2022.",
-  "date": "2022/09/24",
-  "type": "Compose Camp",
-  "slug": "compose-camp-day-04",
-  "eventpic": "/events/compose-camp/compose-camp.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-04-add-a-button-to-an-app/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-04-add-a-button-to-an-app/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f4172b9e1643fcc08a15"
-  },
-  "id": "W2F3edI6XmOibv6LoX7OI",
-  "name": "Compose Camp Day 05 | Interact with UI and state",
-  "description": "Learn how to build Android apps! Join us for ComposeCamp on September 26 , 2022.",
-  "date": "2022/09/26",
-  "type": "Compose Camp",
-  "slug": "compose-camp-day-05",
-  "eventpic": "/events/compose-camp/compose-camp.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-05-interact-with-ui-and-state/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-05-interact-with-ui-and-state/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f4992b9e1643fcc08a17"
-  },
-  "id": "uuShkbEwO_dwQWGvJyRPP",
-  "name": "Get started With GDSC",
-  "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
-  "date": "2022/08/17",
-  "type": "Info Session",
-  "slug": "get-started-with-gdsc",
-  "eventpic": "/events/get-started-with-gdsc/get-started-with-gdsc.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "JIS University Kolkata",
-  "locationUrl": "https://www.google.com/maps/dir//81%2CNilgunj%20Road%2C%20Agarpara%2C%20Kolkata-700109.%20Kolkata",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f52f2b9e1643fcc08a19"
-  },
-  "id": "bXHlUvlfu6oUgPB3wce-9",
-  "name": "Host your code with GitHub",
-  "description": "GitHub, Inc., is an Internet hosting service for software development and version control using Git.",
-  "date": "2022/10/26",
-  "type": "Hands on Workshop",
-  "slug": "get-started-with-gdsc",
-  "eventpic": "/events/host-your-code-with-github/host-your-code-with-github.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-host-your-code-with-github/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f83cfe54acaac63274ea"
-  },
-  "id": "Zj0e1WTPaDWkulJhvvQsp",
-  "name": "Interview Preparation for Product Companies",
-  "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview.",
-  "date": "2022/11/05",
-  "type": "Hands on Workshop",
-  "slug": "interview-preparation-for-product-companies-development-roadmap/",
-  "eventpic": "/events/interview-preparation-for-product-companies-development-roadmap/interview-preparation-for-product-companies-development-roadmap.png",
-  "eventbanner": "/events/interview-preparation-for-product-companies-development-roadmap/interview-preparation-for-product-companies-development-roadmap-banner.png/",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f8b2fe54acaac63274ec"
-  },
-  "id": "Pka3IGNScb9FOFm9JG-u3",
-  "name": "Introduction to Version Control System",
-  "description": "Join us to learn about the version control system.",
-  "date": "2022/10/26",
-  "type": "Bootcamp",
-  "slug": "introduction-to-version-control-system",
-  "eventpic": "/events/introduction-to-version-control-system/introduction-to-version-control-system.png",
-  "eventbanner": "/events/introduction-to-version-control-system/introduction-to-version-control-system-banner.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-introduction-to-version-control-system-i/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-introduction-to-version-control-system-i/",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6386f90bfe54acaac63274ee"
-  },
-  "id": "i-nOq_lUHK_wqxfrKQf24",
-  "name": "Substrate Saturday - Bootcamp Series 2",
-  "description": "It will be an insightful workshop of 1 hr online on Unique Blockchain , From Zero to Hero with our eminent Guest speaker Alexander Saft, Lead Developer at Unique (https://unique.network/)",
-  "date": "2022/09/03",
-  "type": "Bootcamp",
-  "slug": "substrate-saturday-bootcamp",
-  "eventpic": "/events/substrate-saturday-bootcamp/substrate-saturday-bootcamp.png",
-  "eventbanner": "/events/substrate-saturday-bootcamp/substrate-saturday-bootcamp-banner.png",
-  "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-substrate-saturday-bootcamp-series-2/",
-  "isActive": false,
-  "isCompleted": true,
-  "locationName": "Online",
-  "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-substrate-saturday-bootcamp-series-2/",
-  "__v": 0
-}]
+        "name": "WebDev Bootcamp",
+        "description": "This intensive, multi-week course will cover a wide range of topics, including HTML, CSS, JavaScript, and modern web development frameworks such as React and Nextjs. You'll have the opportunity to work on hands-on projects and receive one-on-one mentorship from our team of experts.",
+        "date": "2022/12/22",
+        "type": "Bootcamp",
+        "slug": "webdev-bootcamp",
+        "eventpic": "/events/webdev-bootcamp/webdev-bootcamp.png",
+        "eventbanner": "/events/webdev-bootcamp/webdev-bootcamp-banner.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-webdev-bootcamp/",
+        "isActive": true,
+        "isCompleted": false,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-webdev-bootcamp/"
+    },
+    {
+        "_id": {
+            "$oid": "637dafd6cfdcdc9bbd4dc14b"
+        },
+        "id": "11",
+        "name": "A Guide to Cybersecurity & Cyberspace",
+        "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview or in learning about the software development roadmap.",
+        "date": "2022/11/05",
+        "type": "Speaker Session",
+        "slug": "a-guide-to-cybersecurity-cyberspace",
+        "eventpic": "/events/a-guide-to-cybersecurity-cyberspace/a-guide-to-cybersecurity-cyberspace.jpg",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-a-guide-to-cybersecurity-cyberspace/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-a-guide-to-cybersecurity-cyberspace/"
+    },
+    {
+        "_id": {
+            "$oid": "637dcb8cff134ec75e8135be"
+        },
+        "id": "563646",
+        "name": "Compose Camp Day 01",
+        "description": "Learn how to build Android apps! Join us for ComposeCamp on September 9 , 2022.",
+        "eventpic": "/events/compose-camp/compose-camp.png",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-01/",
+        "date": "2022/09/09",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-01/",
+        "isCompleted": true,
+        "isActive": false,
+        "type": "Compose Camp",
+        "locationName": "Online",
+        "slug": "compose-camp-day-01",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f2510376d77626a4e8a2"
+        },
+        "id": "563647",
+        "name": "Compose Camp Day 02 | Basic Layout",
+        "description": "Learn how to build Android apps! Join us for ComposeCamp on September 17 , 2022.",
+        "eventpic": "/events/compose-camp/compose-camp.png",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-02-basic-layout/",
+        "date": "2022/09/17",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-02-basic-layout/",
+        "isCompleted": true,
+        "isActive": false,
+        "type": "Compose Camp",
+        "locationName": "Online",
+        "slug": "compose-camp-day-02",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f32f2b9e1643fcc08a11"
+        },
+        "id": "CF0HYGxCm2pkVPepcnJVb",
+        "name": "Compose Camp Day 03 | Basic Layout",
+        "description": "Learn how to build Android apps! Join us for ComposeCamp on September 18 , 2022.",
+        "date": "2022/09/18",
+        "type": "Compose Camp",
+        "slug": "compose-camp-day-03",
+        "eventpic": "/events/compose-camp/compose-camp.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-03-kotlin-fundamentals/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-03-kotlin-fundamentals/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f3a42b9e1643fcc08a13"
+        },
+        "id": "P_R828zVe8_GKXuKchxEg",
+        "name": "Compose Camp Day 04 | Add a button to an app",
+        "description": "Learn how to build Android apps! Join us for ComposeCamp on September 24 , 2022.",
+        "date": "2022/09/24",
+        "type": "Compose Camp",
+        "slug": "compose-camp-day-04",
+        "eventpic": "/events/compose-camp/compose-camp.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-04-add-a-button-to-an-app/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-04-add-a-button-to-an-app/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f4172b9e1643fcc08a15"
+        },
+        "id": "W2F3edI6XmOibv6LoX7OI",
+        "name": "Compose Camp Day 05 | Interact with UI and state",
+        "description": "Learn how to build Android apps! Join us for ComposeCamp on September 26 , 2022.",
+        "date": "2022/09/26",
+        "type": "Compose Camp",
+        "slug": "compose-camp-day-05",
+        "eventpic": "/events/compose-camp/compose-camp.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-05-interact-with-ui-and-state/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-compose-camp-day-05-interact-with-ui-and-state/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f4992b9e1643fcc08a17"
+        },
+        "id": "uuShkbEwO_dwQWGvJyRPP",
+        "name": "Get started With GDSC",
+        "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
+        "date": "2022/08/17",
+        "type": "Info Session",
+        "slug": "get-started-with-gdsc",
+        "eventpic": "/events/get-started-with-gdsc/get-started-with-gdsc.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "JIS University Kolkata",
+        "locationUrl": "https://www.google.com/maps/dir//81%2CNilgunj%20Road%2C%20Agarpara%2C%20Kolkata-700109.%20Kolkata",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f52f2b9e1643fcc08a19"
+        },
+        "id": "bXHlUvlfu6oUgPB3wce-9",
+        "name": "Host your code with GitHub",
+        "description": "GitHub, Inc., is an Internet hosting service for software development and version control using Git.",
+        "date": "2022/10/26",
+        "type": "Hands on Workshop",
+        "slug": "get-started-with-gdsc",
+        "eventpic": "/events/host-your-code-with-github/host-your-code-with-github.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-host-your-code-with-github/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f83cfe54acaac63274ea"
+        },
+        "id": "Zj0e1WTPaDWkulJhvvQsp",
+        "name": "Interview Preparation for Product Companies",
+        "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview.",
+        "date": "2022/11/05",
+        "type": "Hands on Workshop",
+        "slug": "interview-preparation-for-product-companies-development-roadmap/",
+        "eventpic": "/events/interview-preparation-for-product-companies-development-roadmap/interview-preparation-for-product-companies-development-roadmap.png",
+        "eventbanner": "/events/interview-preparation-for-product-companies-development-roadmap/interview-preparation-for-product-companies-development-roadmap-banner.png/",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f8b2fe54acaac63274ec"
+        },
+        "id": "Pka3IGNScb9FOFm9JG-u3",
+        "name": "Introduction to Version Control System",
+        "description": "Join us to learn about the version control system.",
+        "date": "2022/10/26",
+        "type": "Bootcamp",
+        "slug": "introduction-to-version-control-system",
+        "eventpic": "/events/introduction-to-version-control-system/introduction-to-version-control-system.png",
+        "eventbanner": "/events/introduction-to-version-control-system/introduction-to-version-control-system-banner.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-introduction-to-version-control-system-i/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-introduction-to-version-control-system-i/",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6386f90bfe54acaac63274ee"
+        },
+        "id": "i-nOq_lUHK_wqxfrKQf24",
+        "name": "Substrate Saturday - Bootcamp Series 2",
+        "description": "It will be an insightful workshop of 1 hr online on Unique Blockchain , From Zero to Hero with our eminent Guest speaker Alexander Saft, Lead Developer at Unique (https://unique.network/)",
+        "date": "2022/09/03",
+        "type": "Bootcamp",
+        "slug": "substrate-saturday-bootcamp",
+        "eventpic": "/events/substrate-saturday-bootcamp/substrate-saturday-bootcamp.png",
+        "eventbanner": "/events/substrate-saturday-bootcamp/substrate-saturday-bootcamp-banner.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-substrate-saturday-bootcamp-series-2/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-substrate-saturday-bootcamp-series-2/",
+        "__v": 0
+    }
+]
