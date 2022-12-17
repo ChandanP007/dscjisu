@@ -12,7 +12,7 @@ export default function Blog() {
     // use effect 
     useEffect(() => {
         async function GetPost() {
-            const res = await fetch(`${process.env.APP_URL}/api/blog/blogpost`, {
+            const res = await fetch(`${process.env.API_URL}/api/blog/blogpost`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
