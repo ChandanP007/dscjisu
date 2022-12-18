@@ -2,7 +2,8 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './layout/**/*.{js,ts,jsx,tsx}'
+    './layout/**/*.{js,ts,jsx,tsx}',
+    './codefest/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     // Ensure these match with .storybook / preview.js
