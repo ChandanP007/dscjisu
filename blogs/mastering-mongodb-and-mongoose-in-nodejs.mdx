@@ -1,0 +1,191 @@
+---
+tags: Nodejs
+title: Mastering MongoDB and Mongoose in Node.js
+body: MongoDB is a popular NoSQL database that is commonly used in Node.js applications. Mongoose is an Object Data Modeling (ODM) library that provides a straight-forward, schema-based solution to model your application data in MongoDB. In this blog, we will learn how to work with MongoDB and Mongoose in a Node.js application.
+author: Abhishek Kushwaha
+date: 2022-12-18
+blogImage: /blogs/mastering-mongodb-and-mongoose-in-nodejs/blogimage.png
+authorImage: https://github.com/Abbhiishek.png
+blogslug: mastering-mongodb-and-mongoose-in-nodejs
+---
+
+MongoDB is a popular NoSQL database that is commonly used in Node.js applications. Mongoose is an Object Data Modeling (ODM) library that provides a straight-forward, schema-based solution to model your application data in MongoDB. In this blog, we will learn how to work with MongoDB and Mongoose in a Node.js application.
+
+## Setting up MongoDB
+
+To start working with MongoDB, you need to have MongoDB installed on your system. You can download and install MongoDB from the official website (https://www.mongodb.com/download-center/community).
+
+Once you have MongoDB installed, you need to start the MongoDB server. To start the server, open a terminal and navigate to the directory where MongoDB is installed. Then, run the following command:
+
+```bash
+$ mongod
+```
+
+This will start the MongoDB server and it will listen for connections on the default port 27017.
+
+## Connecting to MongoDB with Mongoose
+
+To connect to MongoDB from a Node.js application, we will use the Mongoose library. Mongoose provides a simple and straight-forward way to model your application data and interacts with MongoDB.
+
+To install Mongoose, run the following command:
+
+```bash
+$ npm install mongoose
+```
+
+Once you have Mongoose installed, you can connect to MongoDB by creating a connection. Here's an example of how to create a connection to MongoDB using Mongoose:
+
+```js
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true });
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log('Connected to MongoDB');
+});
+```
+
+In the above code, we are connecting to a database named "myapp" on the local machine. The mongoose.connect function establishes the connection to the database. The useNewUrlParser option is used to specify that we want to use the new URL parser introduced in MongoDB 4.0.
+
+The db object represents the connection to the database. We are binding an event listener to the error event, which will be triggered if there is an error while connecting to the database. We are also binding an event listener to the open event, which will be triggered when the connection is successfully established.
+
+## Defining a Mongoose schema
+
+A Mongoose schema defines the structure of the document, default values, validators, and other options for the documents stored in a collection. To define a Mongoose schema, we need to create a new file and define a schema using the mongoose.Schema constructor.
+
+Here's an example of how to define a schema for a user document:
+
+```js
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+```
+
+## Creating a Mongoose model
+
+A Mongoose model is a wrapper on the Mongoose schema that provides methods for CRUD operations on the documents of a collection. To create a model, we need to pass the schema to the mongoose.model function.
+
+Here's an example of how to create a model from the user schema defined above:
+
+```js
+const User = mongoose.model('User', userSchema);
+```
+
+The first argument of the mongoose.model function is the name of the model, which will be used to create the collection in the database. The second argument is the schema that the model will use.
+
+## Creating and saving documents
+
+To create and save a new document in the database, we can use the save method of the model. Here's an example of how to create and save a new user document:
+
+```js
+const user = new User({
+  name: 'John Doe',
+  email: 'john@doe.com',
+  password: 'password',
+});
+
+user.save((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('User saved successfully');
+  }
+});
+```
+
+In the above code, we are creating a new instance of the User model and setting the values for the name, email, and password fields. Then, we are calling the save method on the instance to save it to the database. The save method accepts a callback function that will be called when the save operation is complete.
+
+## Finding documents
+
+To find documents in the database, we can use the find method of the model. The find method returns an array of documents that match the query.
+
+Here's an example of how to find all users in the database:
+
+```js
+User.find((error, users) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(users);
+  }
+});
+```
+
+The find method accepts a callback function that will be called when the find operation is complete. The callback function will be passed two arguments: an error object (if an error occurred) and an array of documents.
+
+We can also specify a query to filter the documents that we want to find. For example, to find all users with a specific email address, we can use the following query:
+
+```js
+User.find({ email: 'john@doe.com' }, (error, users) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(users);
+  }
+});
+```
+
+## Updating documents
+
+To update a document in the database, we can use the findOneAndUpdate method of the model. This method finds a single document and updates it based on the provided data.
+
+Here's an example of how to update a user document:
+
+```js
+User.findOneAndUpdate(
+  { email: 'john@doe.com' },
+  { name: 'John Smith' },
+  (error, user) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('User updated successfully');
+    }
+  }
+);
+```
+
+In the above code, we are finding the user with the email "john@doe.com" and updating their name to "John Smith". The findOneAndUpdate method accepts three arguments: a query to find the document, the data to update, and a callback function. The callback function will be called when the update operation is complete and will be passed two arguments: an error object (if an error occurred) and the updated document.
+
+## Deleting documents
+
+To delete a document from the database, we can use the findOneAndDelete method of the model. This method finds a single document and deletes it.
+
+Here's an example of how to delete a user document:
+
+```js
+User.findOneAndDelete({ email: 'john@doe.com' }, (error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('User deleted successfully');
+  }
+});
+```
+
+The findOneAndDelete method accepts two arguments: a query to find the document and a callback function. The callback function will be called when the delete operation is complete and will be passed an error object (if an error occurred).
+
+## Conclusion
+
+In this blog, we learned how to work with MongoDB and Mongoose in a Node.js application. We learned how to connect to the database, define a schema, create a model, create and save documents, find documents, update documents, and delete documents. With these basic operations, you can start building your own MongoDB-powered Node.js applications.

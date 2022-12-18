@@ -12,12 +12,7 @@ export default function Blog() {
     // use effect 
     useEffect(() => {
         async function GetPost() {
-            const res = await fetch(`${process.env.API_URL}/api/blog/blogpost`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+            const res = await fetch('/api/blog/blogpost')
             const blogs = await res.json()
             console.log(blogs)
             const UpvotedBlogs = blogs.sort((a: IBlog, b: IBlog) => b.reaction.upvote - a.reaction.upvote)
@@ -55,15 +50,12 @@ export default function Blog() {
                                                 authorImage={blog.authorImage}
                                                 blogslug={blog.slug}
                                                 readingTime={""}
-
                                             />
-
                                         )
                                     })
                                 }
                             </div>
                         </div>
-
                         <div className="p-5 flex justify-center">
                             <Link href="/blog" passHref>
                                 <button className="bg-yellow-400 p-5 rounded-lg">
