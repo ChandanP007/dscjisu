@@ -28,7 +28,7 @@ export default function WhyCodeFest() {
                 <div className="flex text-center justify-center items-center">
                     <h1 className="text-4xl font-bold text-white">Why Codefest?</h1>
                 </div>
-                <div className="container p-10 mx-auto">
+                <div className="container lg:p-10 mx-auto">
                     <div className="grid lg:grid-cols-3  gap-1">
                         {whycodefest.map((item, index) => {
                             return (
