@@ -4,6 +4,8 @@ import Footer from '../components/layouts/Footer';
 import Navbar from '../components/layouts/Navbar';
 import './globals.css';
 
+import { UserProvider } from '@auth0/nextjs-auth0/client';
+
 function MyApp({ Component, pageProps }: any) {
   // Use the layout defined at the page level, if available
   // const getLayout = Component.getLayout || ((page) => page);
@@ -32,16 +34,18 @@ function MyApp({ Component, pageProps }: any) {
         <meta property="og:ttl" content="777600" />
         <meta property="og:locale" content="en_US" />
       </Head>
-      <Navbar />
-      <NextNProgress
-        color="#62B6B7"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
-        options={{ easing: 'ease', speed: 500 }}
-      />
-      <Component {...pageProps} />
-      <Footer />
+      <UserProvider>
+        <Navbar {...pageProps} />
+        <NextNProgress
+          color="#62B6B7"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          options={{ easing: 'ease', speed: 500 }}
+        />
+        <Component {...pageProps} />
+        <Footer />
+      </UserProvider>
     </>
   )
 

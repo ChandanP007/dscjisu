@@ -14,7 +14,7 @@ export default function Blog() {
         async function GetPost() {
             const res = await fetch('/api/blog/blogpost')
             const blogs = await res.json()
-            console.log(blogs)
+            // console.log(blogs)
             const UpvotedBlogs = blogs.sort((a: IBlog, b: IBlog) => b.reaction.upvote - a.reaction.upvote)
             // get only the first blog 
             const firstBlog = UpvotedBlogs.slice(0, 4)

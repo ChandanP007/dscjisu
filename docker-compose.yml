@@ -8,10 +8,13 @@ services:
     volumes:
       - ./pages:/app/pages
       - ./components:/app/components
-      - ./layout:/app/layout
       - ./lib:/app/lib
+      - ./public:/app/public
+      - ./next.config.js:/app/next.config.js
+      - ./package.json:/app/package.json
+      - ./yarn.lock:/app/yarn.lock
+      - ./blogs:/app/blogs
+      - ./events:/app/events
       - ./content:/app/content
-      - ./blogs:app/blogs
-      - ./events:app/events
-      - ./public:app/public
-      - ./models:app/models
+      - ./layout:/app/layout
+      - ./models:/app/models
