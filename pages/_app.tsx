@@ -45,6 +45,9 @@ function MyApp({ Component, pageProps }: any) {
         />
         <Component {...pageProps} />
         <Footer />
+        {/* <!-- Start of HubSpot Embed Code --> */}
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/23603225.js"></script>
+        {/* <!-- End of HubSpot Embed Code --> */}
       </UserProvider>
     </>
   )
