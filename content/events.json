@@ -1,4 +1,21 @@
 [{
+        "id": "OnW1ykxh267kSi-skD4vT",
+        "name": "Learn Internet Fundamentals",
+        "description": "Learn the basic of Web - Internet Fundamentals",
+        "date": "2022/12/23",
+        "type": "Bootcamp",
+        "slug": "webdev-bootcamp-internet-fundamental",
+        "eventpic": "/events/webdev-bootcamp-internet-fundamental/webdev-bootcamp-internet-fundamental-bootcamp.png",
+        "eventbanner": "/events/webdev-bootcamp-internet-fundamental/webdev-bootcamp-internet-fundamental-banner.png",
+        "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-learn-internet-fundamentals/",
+        "isActive": false,
+        "isCompleted": true,
+        "locationName": "Online",
+        "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-learn-internet-fundamentals/",
+        "_id": "63a520b2313126a840e3da34",
+        "__v": 0
+    },
+    {
         "name": "WebDev Bootcamp",
         "description": "This intensive, multi-week course will cover a wide range of topics, including HTML, CSS, JavaScript, and modern web development frameworks such as React and Nextjs. You'll have the opportunity to work on hands-on projects and receive one-on-one mentorship from our team of experts.",
         "date": "2022/12/22",

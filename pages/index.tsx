@@ -2,20 +2,25 @@ import Head from 'next/head';
 import CommunityData from '../content/community.json';
 import EventData from '../content/events.json';
 import TeamData from '../content/teams.json';
-import Agenda from '../layout/agenda';
-import Blog from '../layout/blog';
 import Chapter from '../layout/Chapter';
 import Community from '../layout/Community';
 import Connect from '../layout/Connect';
 import Events from '../layout/Events';
-import Gallery from '../layout/gallery';
 import Header from '../layout/Header';
 import Team from '../layout/Team';
+import Agenda from '../layout/agenda';
+import Blog from '../layout/blog';
+import Gallery from '../layout/gallery';
 
 
 
 
-export async function getStaticProps() {
+export async function getServerSideProps({ res }: any) {
+
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
 
   const Community = CommunityData;
   return {

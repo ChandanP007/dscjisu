@@ -14,7 +14,7 @@ import rehypeSlug from "rehype-slug";
 import toc from "rehype-toc";
 import remarkGfm from "remark-gfm";
 import YouTube from "../../components/cards/youtube/YoutubeCard";
-import { getPostFromSlug, getSlugs, PostMeta } from "../../lib/blog";
+import { PostMeta, getPostFromSlug, getSlugs } from "../../lib/blog";
 
 
 interface MDXPost {
@@ -145,7 +145,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
                             </div>
                             <div className="grid-col-1 p-2 rounded-md sticky bottom-5 bg-slate-900 lg:bg-black">
                                 <div className="lg:flex grid grid-cols-3 gap-3 lg:flex-col lg:gap-5  sticky lg:top-56 bottom-0 text-white justify-center">
-                                    <div className="cursor-pointer  flex justify-center content-center text-center rounded"
+                                    <div className="cursor-pointer text-white rounded-full  bg-blue-500 hover:bg-blue-800
+                                     flex justify-center content-center text-center "
                                     >
                                         <LoadingButton
                                             size="small"
@@ -166,7 +167,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1> {like} 👍</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    <div className="cursor-pointer
+                                    text-white bg-red-400   hover:bg-red-800 rounded-full
+                                      flex justify-center content-center text-center"
                                     >
                                         <LoadingButton
                                             size="small"
@@ -188,7 +191,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             {/* <h1> {like} 👍</h1> */}
                                         </LoadingButton>
                                     </div>
-                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    <div className="cursor-pointer 
+                                    text-white bg-violet-400   hover:bg-violet-800 rounded-full
+                                     flex justify-center content-center text-center"
                                     >
                                         <LoadingButton
                                             size="small"
@@ -201,16 +206,16 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                                     await UpdateReaction(love, like, unicorn + 1, wow, upvote, slug)
                                                 }
                                             }
-
                                             loading={loading}
                                             className="text-white bg-violet-400   hover:bg-violet-800 rounded-full"
-
                                         // variant="outlined"
                                         >
                                             <h1>{unicorn} 🦄</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    <div className="cursor-pointer 
+                                    text-white bg-red-400  hover:bg-red-800 rounded-full
+                                    flex justify-center content-center text-center"
                                     >
 
                                         <LoadingButton
@@ -233,7 +238,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1>{wow} 😲</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    <div className="cursor-pointer 
+                                    text-white bg-emerald-500 hover:bg-emerald-600 rounded-full
+                                    flex justify-center content-center text-center"
                                     >
                                         <LoadingButton
                                             size="small"
@@ -255,7 +262,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                             <h1>{upvote} ⬆️</h1>
                                         </LoadingButton>
                                     </div>
-                                    <div className="cursor-pointer  flex justify-center content-center text-center"
+                                    <div className="cursor-pointer  flex justify-center content-center text-center
+                                    text-white bg-rose-700 hover:bg-rose-800 rounded-full
+                                    "
                                     >
                                         <LoadingButton
                                             size="small"
