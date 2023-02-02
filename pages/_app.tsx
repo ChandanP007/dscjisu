@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }: any) {
         <meta property="og:type" content="website" />
         <meta property="og:ttl" content="777600" />
         <meta property="og:locale" content="en_US" />
+        <meta name="google-site-verification" content="Yh2HR3kwJNxkQBdgRnbLT-lZa2HCiRcNoTsCDAM8k1Q" />
       </Head>
       <UserProvider>
         <Navbar {...pageProps} />
