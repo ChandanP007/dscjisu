@@ -99,7 +99,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <Head>
                 <title>{post.meta.title}</title>
                 <meta name="description" content={post.meta.body} />
-                <meta name="og:title" content={post.meta.title} />
+                <meta name="tags" content={post.meta.body} />
+                <meta name="og:title" content={post.meta.title + `gdsc blog jisu jis university abhishek Kushwaha `} />
                 <meta name="og:description" content={post.meta.body} />
                 <meta name="og:image" content={`https://dscjisu.vercel.app` + post.meta.blogImage} />
                 <meta name="twitter:creator" content="@dscjisu" />
